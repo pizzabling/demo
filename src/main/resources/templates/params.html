@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">1c Сотрудник</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" data-th-href="@{/}">Домой <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/rentCalc}" data-toggle="tooltip"
+                               title="Здесь вы можете поместить сотрудников в отдельную группу и рассчитать их совместную рентабельность">Рассчитать
+                                лучшую группу</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Меню
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </nav>
+
+            <form data-th-action="@{/params}" method="post">
+                <div class="form-group">
+                    <label for="parameter1"></label>
+                    <input type="number" name="bond" class="form-control" id="parameter1"
+                           placeholder="Bond">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter2"></label>
+                    <input type="number" name="Kent" class="form-control" id="parameter2"
+                           placeholder="Kent">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter3"></label>
+                    <input type="number" name="Parlament" class="form-control" id="parameter3"
+                           placeholder="Parlament">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter4"></label>
+                    <input type="number" name="Winston" class="form-control" id="parameter4"
+                           placeholder="Winston">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter5"></label>
+                    <input type="number" name="Lm" class="form-control" id="parameter5"
+                           placeholder="Lm">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter6"></label>
+                    <input type="number" name="Malboro" class="form-control" id="parameter6"
+                           placeholder="Malboro">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter7"></label>
+                    <input type="number" name="Rothmans" class="form-control" id="parameter7"
+                           placeholder="Rothmans">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter8"></label>
+                    <input type="number" name="Ld" class="form-control" id="parameter8"
+                           placeholder="Ld">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter9"></label>
+                    <input type="number" name="Morris" class="form-control" id="parameter9"
+                           placeholder="Morris">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter10"></label>
+                    <input type="number" name="Aliance" class="form-control" id="parameter10"
+                           placeholder="Aliance">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter11"></label>
+                    <input type="number" name="Java" class="form-control" id="parameter11"
+                           placeholder="Java">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter12"></label>
+                    <input type="number" name="Optima" class="form-control" id="parameter12"
+                           placeholder="Optima">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter13"></label>
+                    <input type="number" name="Petr" class="form-control" id="parameter13"
+                           placeholder="Petr">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter14"></label>
+                    <input type="number" name="Maksim" class="form-control" id="parameter14"
+                           placeholder="Maksim">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter15"></label>
+                    <input type="number" name="Crests" class="form-control" id="parameter15"
+                           placeholder="Кресты">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter16"></label>
+                    <input type="number" name="Vog" class="form-control" id="parameter16"
+                           placeholder="Vog">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter17"></label>
+                    <input type="number" name="Glamur" class="form-control" id="parameter17"
+                           placeholder="Гламур">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter18"></label>
+                    <input type="number" name="Kiss" class="form-control" id="parameter18"
+                           placeholder="Kiss">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter19"></label>
+                    <input type="number" name="Esse" class="form-control" id="parameter19"
+                           placeholder="Esse">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter20"></label>
+                    <input type="number" name="Quin" class="form-control" id="parameter20"
+                           placeholder="Quin">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter21"></label>
+                    <input type="number" name="Lady" class="form-control" id="parameter21"
+                           placeholder="Lady">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter22"></label>
+                    <input type="number" name="Mor" class="form-control" id="parameter22"
+                           placeholder="Mor">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter23"></label>
+                    <input type="number" name="Chester" class="form-control" id="parameter23"
+                           placeholder="Chester">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter24"></label>
+                    <input type="number" name="Radopy" class="form-control" id="parameter24"
+                           placeholder="Radopy">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter25"></label>
+                    <input type="number" name="Stuardessa" class="form-control" id="parameter25"
+                           placeholder="Стюардесса">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter26"></label>
+                    <input type="number" name="Stolichniye" class="form-control" id="parameter26"
+                           placeholder="Stolichniye">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter27"></label>
+                    <input type="number" name="Donskoy" class="form-control" id="parameter27"
+                           placeholder="Donskoy">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter28"></label>
+                    <input type="number" name="Troyka" class="form-control" id="parameter28"
+                           placeholder="Тройка">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter29"></label>
+                    <input type="number" name="Fast" class="form-control" id="parameter29"
+                           placeholder="Fast">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter30"></label>
+                    <input type="number" name="Royal" class="form-control" id="parameter30"
+                           placeholder="Royal">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter31"></label>
+                    <input type="number" name="Manchester" class="form-control" id="parameter31"
+                           placeholder="Manchester">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter32"></label>
+                    <input type="number" name="Pretigue" class="form-control" id="parameter32"
+                           placeholder="Pretigue">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter33"></label>
+                    <input type="number" name="Premier" class="form-control" id="parameter33"
+                           placeholder="Premier">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter34"></label>
+                    <input type="number" name="Cosmos" class="form-control" id="parameter34"
+                           placeholder="Cosmos">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter35"></label>
+                    <input type="number" name="Next" class="form-control" id="parameter35"
+                           placeholder="Next">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter36"></label>
+                    <input type="number" name="Magnat" class="form-control" id="parameter36"
+                           placeholder="Magnat">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter37"></label>
+                    <input type="number" name="Minsk" class="form-control" id="parameter37"
+                           placeholder="Minsk">
+                </div>
+
+                <div class="form-group">
+                    <label for="parameter38"></label>
+                    <input type="number" name="Souz" class="form-control" id="parameter38"
+                           placeholder="Союз">
+                </div>
+
+
+                <button>Добавить</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
