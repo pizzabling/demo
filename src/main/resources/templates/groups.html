@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">1c Сотрудник</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" data-th-href="@{/}">Домой <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/rentCalc}" data-toggle="tooltip"
+                               title="Здесь вы можете поместить сотрудников в отдельную группу и рассчитать их совместную рентабельность">Рассчитать
+                                лучшую группу</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/params}" data-toggle="tooltip"
+                               title="Здесь вы можете задать параметры по каждому виду сигарет для рассчёта лучшей группы">
+                                Задать параметры
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/bestsGroup}" data-toggle="tooltip"
+                               title="Посмотреть лучшие группы">
+                                Лучшая группа
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Меню
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover shoplist col-12 col-md-8">
+                <thead>
+                <tr>
+                    <th scope="col">Группа из двух</th>
+                    <th scope="col">Группа из трёх</th>
+                    <th scope="col">Группа из четырёх</th>
+                    <th scope="col">Группа из шести</th>
+                    <th scope="col">Группа из восьми</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <div data-th-each="worker2:${workers2}">
+                            <table class="table table-hover shoplist col-12 col-md-8">
+                                <thead >
+                                <tr>
+                                    <th scope="col">Айди группы</th>
+                                    <th scope="col">Айди Сотрудников</th>
+                                    <th scope="col">Рентабельность</th>
+                                    <th scope="col">Затраты</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>[[${worker2.getId()}]]</td>
+                                    <td>[[${worker2.getWorkerFirst()}]]</td>
+                                    <td>[[${worker2.getRentFirst()}]]</td>
+                                    <td>[[${worker2.getExpenses()}]]</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker2.getWorkerSecond()}]]</td>
+                                    <td>[[${worker2.getRentSecond()}]]</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a data-th-href="@{/createGroup2}">Создать группу из 2 сотрудников</a>
+                    </td>
+                    <td>
+                        <div data-th-each="worker3:${workers3}">
+                            <table class="table table-hover shoplist col-12 col-md-8">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Айди группы</th>
+                                    <th scope="col">Айди Сотрудников</th>
+                                    <th scope="col">Рентабельность</th>
+                                    <th scope="col">Затраты</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>[[${worker3.getId()}]]</td>
+                                    <td>[[${worker3.getWorkerFirst()}]]</td>
+                                    <td>[[${worker3.getRentFirst()}]]</td>
+                                    <td>[[${worker3.getExpenses()}]]</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker3.getWorkerSecond()}]]</td>
+                                    <td>[[${worker3.getRentSecond()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker3.getWorkerThird()}]]</td>
+                                    <td>[[${worker3.getRentThird()}]]</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a data-th-href="@{/createGroup3}">Создать группу из 3 сотрудников</a>
+                    </td>
+                    <td>
+                        <div data-th-each="worker4:${workers4}">
+                            <table class="table table-hover shoplist col-12 col-md-8">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Айди группы</th>
+                                    <th scope="col">Айди Сотрудников</th>
+                                    <th scope="col">Рентабельность</th>
+                                    <th scope="col">Затраты</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>[[${worker4.getId()}]]</td>
+                                    <td>[[${worker4.getWorkerFirst()}]]</td>
+                                    <td>[[${worker4.getRentFirst()}]]</td>
+                                    <td>[[${worker4.getExpenses()}]]</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker4.getWorkerSecond()}]]</td>
+                                    <td>[[${worker4.getRentSecond()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker4.getWorkerThird()}]]</td>
+                                    <td>[[${worker4.getRentThird()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker4.getWorkerFourth()}]]</td>
+                                    <td>[[${worker4.getRentFourth()}]]</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a data-th-href="@{/createGroup4}">Создать группу из 4 сотрудников</a>
+                    </td>
+                    <td>
+                        <div data-th-each="worker6:${workers6}">
+                            <table class="table table-hover shoplist col-12 col-md-8">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Айди группы</th>
+                                    <th scope="col">Айди Сотрудников</th>
+                                    <th scope="col">Рентабельность</th>
+                                    <th scope="col">Затраты</th>
+
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>[[${worker6.getId()}]]</td>
+                                    <td>[[${worker6.getWorkerFirst()}]]</td>
+                                    <td>[[${worker6.getRentFirst()}]]</td>
+                                    <td>[[${worker6.getExpenses()}]]</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker6.getWorkerSecond()}]]</td>
+                                    <td>[[${worker6.getRentSecond()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker6.getWorkerThird()}]]</td>
+                                    <td>[[${worker6.getRentThird()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker6.getWorkerFourth()}]]</td>
+                                    <td>[[${worker6.getRentFourth()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker6.getWorkerFifth()}]]</td>
+                                    <td>[[${worker6.getRentFifth()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker6.getWorkerSixth()}]]</td>
+                                    <td>[[${worker6.getRentSixth()}]]</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a data-th-href="@{/createGroup6}">Создать группу из 6 сотрудников</a>
+                    </td>
+                    <td>
+                        <div data-th-each="worker8:${workers8}">
+                            <table class="table table-hover shoplist col-12 col-md-8">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Айди группы</th>
+                                    <th scope="col">Айди Сотрудников</th>
+                                    <th scope="col">Рентабельность</th>
+                                    <th scope="col">Затраты</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>[[${worker8.getId()}]]</td>
+                                    <td>[[${worker8.getWorkerFirst()}]]</td>
+                                    <td>[[${worker8.getRentFirst()}]]</td>
+                                    <td>[[${worker8.getExpenses()}]]</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker8.getWorkerSecond()}]]</td>
+                                    <td>[[${worker8.getRentSecond()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker8.getWorkerThird()}]]</td>
+                                    <td>[[${worker8.getRentThird()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker8.getWorkerFourth()}]]</td>
+                                    <td>[[${worker8.getRentFourth()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker8.getWorkerFifth()}]]</td>
+                                    <td>[[${worker8.getRentFifth()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker8.getWorkerSixth()}]]</td>
+                                    <td>[[${worker8.getRentSixth()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker8.getWorkerSixth()}]]</td>
+                                    <td>[[${worker8.getRentSixth()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker8.getWorkerSixth()}]]</td>
+                                    <td>[[${worker8.getRentSixth()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker8.getWorkerSeventh()}]]</td>
+                                    <td>[[${worker8.getRentSeventh()}]]</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${worker8.getWorkerEighth()}]]</td>
+                                    <td>[[${worker8.getRentEighth()}]]</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a data-th-href="@{/createGroup8}">Создать группу из 8 сотрудников</a>
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

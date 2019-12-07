@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Главная страница</title>
+    <title>Создание группы из восьми</title>
 </head>
 <body>
 <div class="container">
@@ -66,55 +66,5 @@
         </div>
     </div>
 </div>
-<table class="table">
-    <thead>
-    <tr>
-
-        <th scope="col">id</th>
-        <th scope="col">Лучшая рент.</th>
-        <th scope="col">Январь</th>
-        <th scope="col">Февраль</th>
-        <th scope="col">Март</th>
-        <th scope="col">Апрель</th>
-        <th scope="col">Май</th>
-        <th scope="col">Июнь</th>
-        <th scope="col">Июль</th>
-        <th scope="col">Август</th>
-        <th scope="col">Сентябрь</th>
-        <th scope="col">Октябрь</th>
-        <th scope="col">Ноябрь</th>
-        <th scope="col">Декабрь</th>
-        <th scope="col">Ratio</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr data-th-each="worker:${workers}">
-        <th scope="row">
-            <div data-toggle="tooltip" title="${worker.getName()}">
-                <a data-th-href="@{/worker/{id}(id=${worker.getId()})}">[[${worker.getWorkerId()}]]</a>
-            </div>
-        </th>
-        <td>[[${worker.getRent()}]]</td>
-        <td>[[${worker.getJanRent()}]]</td>
-        <td>[[${worker.getFebRent()}]]</td>
-        <td>[[${worker.getMarRent()}]]</td>
-        <td>[[${worker.getAprRent()}]]</td>
-        <td>[[${worker.getMayRent()}]]</td>
-        <td>[[${worker.getJuneRent()}]]</td>
-        <td>[[${worker.getJulyRent()}]]</td>
-        <td>[[${worker.getAugRent()}]]</td>
-        <td>[[${worker.getSepRent()}]]</td>
-        <td>[[${worker.getOctRent()}]]</td>
-        <td>[[${worker.getNovRent()}]]</td>
-        <td>[[${worker.getDecRent()}]]</td>
-        <td>[[${worker.getRatio()}]]</td>
-
-    </tr>
-    </tbody>
-
-</table>
-<a data-th-href="@{/add}">Добавить сотрудника</a>
-
-
 </body>
 </html>

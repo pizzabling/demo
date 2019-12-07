@@ -31,6 +31,18 @@
                                title="Здесь вы можете поместить сотрудников в отдельную группу и рассчитать их совместную рентабельность">Рассчитать
                                 лучшую группу</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/params}" data-toggle="tooltip"
+                               title="Здесь вы можете задать параметры по каждому виду сигарет для рассчёта лучшей группы">
+                                Задать параметры
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/bestsGroup}" data-toggle="tooltip"
+                               title="Посмотреть лучшие группы">
+                                Лучшая группа
+                            </a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,7 +64,8 @@
                 </div>
             </nav>
             <h1>Лучшая группа</h1>
-            <div data-th-each="best:${bests}">
+
+            <div data-th-each="best:${best}">
             <table class="table">
                 <thead>
                 <tr>
@@ -63,7 +76,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr data-th-each="best:${bests}">
+                <tr data-th-each="bests:${best}">
                     <td>[[${best.getId()}]]</td>
                     <td>[[${best.getFirstId()}]]</td>
                     <td>[[${best.getSecondId()}]]</td>

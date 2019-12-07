@@ -31,6 +31,18 @@
                                title="Здесь вы можете поместить сотрудников в отдельную группу и рассчитать их совместную рентабельность">Рассчитать
                                 лучшую группу</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/params}" data-toggle="tooltip"
+                               title="Здесь вы можете задать параметры по каждому виду сигарет для рассчёта лучшей группы">
+                                Задать параметры
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/bestsGroup}" data-toggle="tooltip"
+                               title="Посмотреть лучшие группы">
+                                Лучшая группа
+                            </a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,136 +64,194 @@
                 </div>
             </nav>
             <h1>[[${title}]]</h1>
-            <table class="table">
-                <thead>
-                <tr>
+            <div class="container ">
+                <div class="row-sm">
+                    <div class="col-sm">
 
-                    <th scope="col">id</th>
-                    <th scope="col">Лучшая рент.</th>
-                    <th scope="col">Январь</th>
-                    <th scope="col">Февраль</th>
-                    <th scope="col">Март</th>
-                    <th scope="col">Апрель</th>
-                    <th scope="col">Май</th>
-                    <th scope="col">Июнь</th>
-                    <th scope="col">Июль</th>
-                    <th scope="col">Август</th>
-                    <th scope="col">Сентябрь</th>
-                    <th scope="col">Октябрь</th>
-                    <th scope="col">Ноябрь</th>
-                    <th scope="col">Декабрь</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">[[${worker.getId()}]]</th>
-                    <td>[[${worker.getRent()}]]</td>
-                    <td>[[${worker.getJanRent()}]]</td>
-                    <td>[[${worker.getFebRent()}]]</td>
-                    <td>[[${worker.getMarRent()}]]</td>
-                    <td>[[${worker.getAprRent()}]]</td>
-                    <td>[[${worker.getMayRent()}]]</td>
-                    <td>[[${worker.getJuneRent()}]]</td>
-                    <td>[[${worker.getJulyRent()}]]</td>
-                    <td>[[${worker.getAugRent()}]]</td>
-                    <td>[[${worker.getSepRent()}]]</td>
-                    <td>[[${worker.getOctRent()}]]</td>
-                    <td>[[${worker.getNovRent()}]]</td>
-                    <td>[[${worker.getDecRent()}]]</td>
-                    <td>[[${worker.getRatio()}]]</td>
 
-                </tr>
-                </tbody>
+                        <a data-th-href="@{/edit/{id}(id=${worker.getId()})}">
+                            <h4>Редактировать</h4>
+                        </a>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-bordered table-sm shoplist col-12 col-md-8">
+                                <thead>
+                                <tr>
 
-            </table>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">Bond</th>
-                    <th scope="col">Kent</th>
-                    <th scope="col">Parlametn</th>
-                    <th scope="col">Winston</th>
-                    <th scope="col">LM</th>
-                    <th scope="col">Malboro</th>
-                    <th scope="col">Rothmans</th>
-                    <th scope="col">LD</th>
-                    <th scope="col">Philip Morris</th>
-                    <th scope="col">Aliance</th>
-                    <th scope="col">Java</th>
-                    <th scope="col">Optima</th>
-                    <th scope="col">Пётр</th>
-                    <th scope="col">Максим</th>
-                    <th scope="col">Кресты</th>
-                    <th scope="col">Vog</th>
-                    <th scope="col">Гламур</th>
-                    <th scope="col">Kiss</th>
-                    <th scope="col">Esse</th>
-                    <th scope="col">Quin</th>
-                    <th scope="col">Lady</th>
-                    <th scope="col">Мор</th>
-                    <th scope="col">Chester</th>
-                    <th scope="col">Радопи</th>
-                    <th scope="col">Стюардесса</th>
-                    <th scope="col">Столичные</th>
-                    <th scope="col">Донской</th>
-                    <th scope="col">Тройка</th>
-                    <th scope="col">Fast</th>
-                    <th scope="col">Royal</th>
-                    <th scope="col">Manchester</th>
-                    <th scope="col">Pretigue</th>
-                    <th scope="col">Premier</th>
-                    <th scope="col">Cosmos</th>
-                    <th scope="col">Next</th>
-                    <th scope="col">Magnat</th>
-                    <th scope="col">Минск</th>
-                    <th scope="col">Союз</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>[[${worker.getBond()}]]</td>
-                    <td>[[${worker.getKent()}]]</td>
-                    <td>[[${worker.getParlament()}]]</td>
-                    <td>[[${worker.getWinston()}]]</td>
-                    <td>[[${worker.getLm()}]]</td>
-                    <td>[[${worker.getMalboro()}]]</td>
-                    <td>[[${worker.getRotmans()}]]</td>
-                    <td>[[${worker.getLd()}]]</td>
-                    <td>[[${worker.getFmorris()}]]</td>
-                    <td>[[${worker.getAliance()}]]</td>
-                    <td>[[${worker.getJava()}]]</td>
-                    <td>[[${worker.getOptima()}]]</td>
-                    <td>[[${worker.getPetr()}]]</td>
-                    <td>[[${worker.getMaksim()}]]</td>
-                    <td>[[${worker.getCrests()}]]</td>
-                    <td>[[${worker.getVog()}]]</td>
-                    <td>[[${worker.getGlamur()}]]</td>
-                    <td>[[${worker.getKiss()}]]</td>
-                    <td>[[${worker.getEsse()}]]</td>
-                    <td>[[${worker.getQuin()}]]</td>
-                    <td>[[${worker.getLady()}]]</td>
-                    <td>[[${worker.getMor()}]]</td>
-                    <td>[[${worker.getChester()}]]</td>
-                    <td>[[${worker.getRadopy()}]]</td>
-                    <td>[[${worker.getStuardessa()}]]</td>
-                    <td>[[${worker.getStolichniye()}]]</td>
-                    <td>[[${worker.getDonskoy()}]]</td>
-                    <td>[[${worker.getTroyka()}]]</td>
-                    <td>[[${worker.getFast()}]]</td>
-                    <td>[[${worker.getRoyal()}]]</td>
-                    <td>[[${worker.getManchester()}]]</td>
-                    <td>[[${worker.getPrestigue()}]]</td>
-                    <td>[[${worker.getPremier()}]]</td>
-                    <td>[[${worker.getCosmos()}]]</td>
-                    <td>[[${worker.getNext()}]]</td>
-                    <td>[[${worker.getMagnat()}]]</td>
-                    <td>[[${worker.getMinsk()}]]</td>
-                    <td>[[${worker.getSouz()}]]</td>
+                                    <th scope="col">id</th>
+                                    <th scope="col">Лучшая рент.</th>
+                                    <th scope="col">Январь</th>
+                                    <th scope="col">Февраль</th>
+                                    <th scope="col">Март</th>
+                                    <th scope="col">Апрель</th>
+                                    <th scope="col">Май</th>
+                                    <th scope="col">Июнь</th>
+                                    <th scope="col">Июль</th>
+                                    <th scope="col">Август</th>
+                                    <th scope="col">Сентябрь</th>
+                                    <th scope="col">Октябрь</th>
+                                    <th scope="col">Ноябрь</th>
+                                    <th scope="col">Декабрь</th>
+                                    <th scope="col">Соотн. к 10 000</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">[[${worker.getId()}]]</th>
+                                    <td>[[${worker.getRent()}]]</td>
+                                    <td>[[${worker.getJanRent()}]]</td>
+                                    <td>[[${worker.getFebRent()}]]</td>
+                                    <td>[[${worker.getMarRent()}]]</td>
+                                    <td>[[${worker.getAprRent()}]]</td>
+                                    <td>[[${worker.getMayRent()}]]</td>
+                                    <td>[[${worker.getJuneRent()}]]</td>
+                                    <td>[[${worker.getJulyRent()}]]</td>
+                                    <td>[[${worker.getAugRent()}]]</td>
+                                    <td>[[${worker.getSepRent()}]]</td>
+                                    <td>[[${worker.getOctRent()}]]</td>
+                                    <td>[[${worker.getNovRent()}]]</td>
+                                    <td>[[${worker.getDecRent()}]]</td>
+                                    <td>[[${worker.getRatio()}]]</td>
 
-                </tr>
-                </tbody>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
-            </table>
+                        <table class="table table-hover shoplist col-12 col-md-8">
+                            <thead>
+                            <tr>
+                                <th scope="col">Bond</th>
+                                <th scope="col">Kent</th>
+                                <th scope="col">Parlametn</th>
+                                <th scope="col">Winston</th>
+                                <th scope="col">LM</th>
+                                <th scope="col">Malboro</th>
+                                <th scope="col">Rothmans</th>
+                                <th scope="col">LD</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>[[${sigarets.getBond()}]]</td>
+                                <td>[[${sigarets.getKent()}]]</td>
+                                <td>[[${sigarets.getParlament()}]]</td>
+                                <td>[[${sigarets.getWinston()}]]</td>
+                                <td>[[${sigarets.getLm()}]]</td>
+                                <td>[[${sigarets.getMalboro()}]]</td>
+                                <td>[[${sigarets.getRotmans()}]]</td>
+                                <td>[[${sigarets.getLd()}]]</td>
+                            </tr>
+                            </tbody>
+
+
+                            <thead>
+                            <tr>
+                                <th scope="col">Philip Morris</th>
+                                <th scope="col">Aliance</th>
+                                <th scope="col">Java</th>
+                                <th scope="col">Optima</th>
+                                <th scope="col">Пётр</th>
+                                <th scope="col">Максим</th>
+                                <th scope="col">Кресты</th>
+                                <th scope="col">Vog</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>[[${sigarets.getFmorris()}]]</td>
+                                <td>[[${sigarets.getAliance()}]]</td>
+                                <td>[[${sigarets.getJava()}]]</td>
+                                <td>[[${sigarets.getOptima()}]]</td>
+                                <td>[[${sigarets.getPetr()}]]</td>
+                                <td>[[${sigarets.getMaksim()}]]</td>
+                                <td>[[${sigarets.getCrests()}]]</td>
+                                <td>[[${sigarets.getVog()}]]</td>
+                            </tr>
+                            </tbody>
+
+                            <thead>
+                            <tr>
+                                <th scope="col">Гламур</th>
+                                <th scope="col">Kiss</th>
+                                <th scope="col">Esse</th>
+                                <th scope="col">Quin</th>
+                                <th scope="col">Lady</th>
+                                <th scope="col">Мор</th>
+                                <th scope="col">Chester</th>
+                                <th scope="col">Радопи</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>[[${sigarets.getGlamur()}]]</td>
+                                <td>[[${sigarets.getKiss()}]]</td>
+                                <td>[[${sigarets.getEsse()}]]</td>
+                                <td>[[${sigarets.getQuin()}]]</td>
+                                <td>[[${sigarets.getLady()}]]</td>
+                                <td>[[${sigarets.getMor()}]]</td>
+                                <td>[[${sigarets.getChester()}]]</td>
+                                <td>[[${sigarets.getRadopy()}]]</td>
+
+                            </tr>
+                            </tbody>
+
+                            <thead>
+                            <tr>
+                                <th scope="col">Стюардесса</th>
+                                <th scope="col">Столичные</th>
+                                <th scope="col">Донской</th>
+                                <th scope="col">Тройка</th>
+                                <th scope="col">Fast</th>
+                                <th scope="col">Royal</th>
+                                <th scope="col">Manchester</th>
+                                <th scope="col">Pretigue</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>[[${sigarets.getStuardessa()}]]</td>
+                                <td>[[${sigarets.getStolichniye()}]]</td>
+                                <td>[[${sigarets.getDonskoy()}]]</td>
+                                <td>[[${sigarets.getTroyka()}]]</td>
+                                <td>[[${sigarets.getFast()}]]</td>
+                                <td>[[${sigarets.getRoyal()}]]</td>
+                                <td>[[${sigarets.getManchester()}]]</td>
+                                <td>[[${sigarets.getPrestigue()}]]</td>
+
+                            </tr>
+                            </tbody>
+
+
+                            <thead>
+                            <tr>
+                                <th scope="col">Premier</th>
+                                <th scope="col">Cosmos</th>
+                                <th scope="col">Next</th>
+                                <th scope="col">Magnat</th>
+                                <th scope="col">Минск</th>
+                                <th scope="col">Союз</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>[[${sigarets.getPremier()}]]</td>
+                                <td>[[${sigarets.getCosmos()}]]</td>
+                                <td>[[${sigarets.getNext()}]]</td>
+                                <td>[[${sigarets.getMagnat()}]]</td>
+                                <td>[[${sigarets.getMinsk()}]]</td>
+                                <td>[[${sigarets.getSouz()}]]</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div>
+                            <label for="comment">Комментарий:</label>
+                            <h4 id="comment">[[${worker.getComment()}]]</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

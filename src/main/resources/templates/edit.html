@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%; /* Ширина таблицы в процентах */
+        }
+
+        .col {
+            width: 100px; /* Ширина ячейки */
+        }
+
+        .th {
+            class: "col-1"
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">1c Сотрудник</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" data-th-href="@{/}">Домой <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/rentCalc}" data-toggle="tooltip"
+                               title="Здесь вы можете поместить сотрудников в отдельную группу и рассчитать их совместную рентабельность">Рассчитать
+                                лучшую группу</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/params}" data-toggle="tooltip"
+                               title="Здесь вы можете задать параметры по каждому виду сигарет для рассчёта лучшей группы">
+                                Задать параметры
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/bestsGroup}" data-toggle="tooltip"
+                               title="Посмотреть лучшие группы">
+                                Лучшая группа
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Меню
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </nav>
+            <div class="col-md-auto">
+                <h1>Редактирование [[${worker.getName()}]]</h1>
+                <h3>ID [[${worker.getWorkerId()}]]</h3>
+            </div>
+            <form data-th-action="@{/edit/{id}/remove(id=${worker.getId()})}" method="post">
+                <button>Удалить</button>
+            </form>
+            <form data-th-action="@{/edit/{id}(id=${worker.getId()})}" method="post">
+                <button>Редактировать</button>
+
+                <div class="form-group">
+                    <label for="name">ФИО Сотрудника</label>
+                    <input class="form-control" type="text" name="name" id="name" placeholder="ФИО"
+                           data-th-value="${worker.getName()}">
+                </div>
+                <div class="form-group">
+                    <label for="workerId">Айди Сотрудника</label>
+                    <input class="form-control" type="number" name="workerId" id="workerId" placeholder="Комментарий"
+                           data-th-value="${worker.getWorkerId()}">
+                </div>
+                <div class="form-group">
+                    <label for="rent">Коэф рентабельности</label>
+                    <input class="form-control" type="number" step="0.1" name="rent" id="rent" placeholder="Коэф"
+                           data-th-value="${worker.getRent()}">
+                </div>
+                <div>
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Preference</label>
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Ставка</option>
+                                <option data-th-value="1">Полная</option>
+                                <option data-th-value="2">Половина</option>
+                                <option data-th-value="3">Треть</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered table-sm shoplist col-12 col-md-8">
+                        <thead>
+                        <tr>
+                            <th class="col" scope="col">Bond</th>
+                            <th class="col" scope="col">Kent</th>
+                            <th class="col" scope="col">Parlametn</th>
+                            <th class="col" scope="col">Winston</th>
+                            <th scope="col" class="col">LM</th>
+                            <th scope="col" class="col">Malboro</th>
+                            <th scope="col" class="col">Rothmans</th>
+                            <th scope="col" class="col">LD</th>
+                            <th scope="col" class="col">Philip Morris</th>
+                            <th scope="col" class="col">Aliance</th>
+                            <th scope="col" class="col">Java</th>
+                            <th scope="col" class="col">Optima</th>
+                            <th scope="col" class="col">Пётр</th>
+                            <th scope="col" class="col">Максим</th>
+                            <th scope="col" class="col">Кресты</th>
+                            <th scope="col" class="col">Vog</th>
+                            <th scope="col" class="col">Гламур</th>
+                            <th scope="col" class="col">Kiss</th>
+                            <th scope="col" class="col">Esse</th>
+                            <th scope="col" class="col">Quin</th>
+                            <th scope="col" class="col">Lady</th>
+                            <th scope="col" class="col">Мор</th>
+                            <th scope="col" class="col">Chester</th>
+                            <th scope="col" class="col">Радопи</th>
+                            <th scope="col" class="col">Стюардесса</th>
+                            <th scope="col" class="col">Столичные</th>
+                            <th scope="col" class="col">Донской</th>
+                            <th scope="col" class="col">Тройка</th>
+                            <th scope="col" class="col">Fast</th>
+                            <th scope="col" class="col">Royal</th>
+                            <th scope="col" class="col">Manchester</th>
+                            <th scope="col" class="col">Pretigue</th>
+                            <th scope="col" class="col">Premier</th>
+                            <th scope="col" class="col">Cosmos</th>
+                            <th scope="col" class="col">Next</th>
+                            <th scope="col" class="col">Magnat</th>
+                            <th scope="col" class="col">Минск</th>
+                            <th scope="col" class="col">Союз</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <input type="number" step="0.1" name="bond" class="col" id="bond"
+                                           data-th-value="${sigarets.getBond()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="kent" class="col" id="kent"
+                                           placeholder="Kent" data-th-value="${sigarets.getKent()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="parlament" class="col" id="parlament"
+                                           placeholder="Parlament" data-th-value="${sigarets.getParlament()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div><input type="number" name="winston" class="col" id="winston"
+                                            placeholder="Winston" data-th-value="${sigarets.getWinston()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="lm" class="col" id="lm"
+                                           placeholder="Lm" data-th-value="${sigarets.getLm()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="malboro" class="col" id="malboro"
+                                           placeholder="Malboro" data-th-value="${sigarets.getMalboro()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="rotmans" class="col" id="rotmans"
+                                           placeholder="Rotmans" data-th-value="${sigarets.getRotmans()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="ld" class="col" id="ld"
+                                           placeholder="Ld" data-th-value="${sigarets.getLd()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="fmorris" class="col" id="fmorris"
+                                           placeholder="Morris" data-th-value="${sigarets.getFmorris()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="aliance" class="col" id="aliance"
+                                           placeholder="Aliance" data-th-value="${sigarets.getAliance()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="java" class="col" id="java"
+                                           placeholder="Java" data-th-value="${sigarets.getJava()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="optima" class="col" id="optima"
+                                           placeholder="Optima" data-th-value="${sigarets.getOptima()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="petr" class="col" id="petr"
+                                           placeholder="Petr" data-th-value="${sigarets.getPetr()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="maksim" class="col" id="maksim"
+                                           placeholder="Maksim" data-th-value="${sigarets.getMaksim()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="crests" class="col" id="crests"
+                                           placeholder="Кресты" data-th-value="${sigarets.getCrests()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="vog" class="col" id="vog"
+                                           placeholder="Vog" data-th-value="${sigarets.getVog()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="glamur" class="col" id="glamur"
+                                           placeholder="Гламур" data-th-value="${sigarets.getGlamur()}">
+                                </div>
+                            </td>
+                            <td class="col">
+
+                                <div>
+                                    <input type="number" name="kiss" class="col" id="kiss"
+                                           placeholder="Kiss" data-th-value="${sigarets.getKiss()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="esse" class="col" id="esse"
+                                           placeholder="Esse" data-th-value="${sigarets.getEsse()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="quin" class="col" id="quin"
+                                           placeholder="Quin" data-th-value="${sigarets.getQuin()}">
+                                </div>
+                            </td>
+                            <td class="col">
+                                <div>
+                                    <input type="number" name="lady" class="col" id="lady"
+                                           placeholder="Lady" data-th-value="${sigarets.getLady()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="mor" class="col" id="mor"
+                                           placeholder="Mor" data-th-value="${sigarets.getMor()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="chester" class="col" id="chester"
+                                           placeholder="Chester" data-th-value="${sigarets.getChester()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="radopy" class="col" id="radopy"
+                                           placeholder="Radopy" data-th-value="${sigarets.getRadopy()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="stuardessa" class="col" id="stuardessa"
+                                           placeholder="Стюардесса" data-th-value="${sigarets.getStuardessa()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="stolichniye" class="col" id="stolichniye"
+                                           placeholder="Stolichniye" data-th-value="${sigarets.getStolichniye()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="donskoy" class="col" id="donskoy"
+                                           placeholder="Donskoy" data-th-value="${sigarets.getDonskoy()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="troyka" class="col" id="troyka"
+                                           placeholder="Тройка" data-th-value="${sigarets.getTroyka()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="fast" class="col" id="fast"
+                                           placeholder="Fast" data-th-value="${sigarets.getFast()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="royal" class="col" id="royal"
+                                           placeholder="Royal" data-th-value="${sigarets.getRoyal()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="manchester" class="col" id="manchester"
+                                           placeholder="Manchester" data-th-value="${sigarets.getManchester()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="prestigue" class="col" id="prestigue"
+                                           placeholder="Pretigue" data-th-value="${sigarets.getPrestigue()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="premier" class="col" id="premier"
+                                           placeholder="Premier" data-th-value="${sigarets.getPremier()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="cosmos" class="col" id="cosmos"
+                                           placeholder="Cosmos" data-th-value="${sigarets.getCosmos()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="next" class="col" id="next"
+                                           placeholder="Next" data-th-value="${sigarets.getNext()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="magnat" class="col" id="magnat"
+                                           placeholder="Magnat" data-th-value="${sigarets.getMagnat()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="minsk" class="col" id="minsk"
+                                           placeholder="Minsk" data-th-value="${sigarets.getMinsk()}">
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <input type="number" name="souz" class="col" id="souz"
+                                           placeholder="Союз" data-th-value="${sigarets.getSouz()}">
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Комментарий</label>
+                    <input class="form-control"  type="text" name="comment" id="comment" placeholder="Комментарий"
+                           data-th-value="${worker.getComment()}">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,10 +1,10 @@
 package com.example.demo.domain;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 public class Parameters {
     private int id;
     private double parameter1;
@@ -46,7 +46,91 @@ public class Parameters {
     private double parameter37;
     private double parameter38;
 
+    public Parameters() {
+    }
 
+    public Parameters(double parameter1, double parameter2, double parameter3, double parameter4, double parameter5, double parameter6, double parameter7, double parameter8, double parameter9, double parameter10, double parameter11, double parameter12, double parameter13, double parameter14, double parameter15, double parameter16, double parameter17, double parameter18, double parameter19, double parameter20, double parameter21, double parameter22, double parameter23, double parameter24, double parameter25, double parameter26, double parameter27, double parameter28, double parameter29, double parameter30, double parameter31, double parameter32, double parameter33, double parameter34, double parameter35, double parameter36, double parameter37, double parameter38) {
+        this.parameter1 = parameter1;
+        this.parameter2 = parameter2;
+        this.parameter3 = parameter3;
+        this.parameter4 = parameter4;
+        this.parameter5 = parameter5;
+        this.parameter6 = parameter6;
+        this.parameter7 = parameter7;
+        this.parameter8 = parameter8;
+        this.parameter9 = parameter9;
+        this.parameter10 = parameter10;
+        this.parameter11 = parameter11;
+        this.parameter12 = parameter12;
+        this.parameter13 = parameter13;
+        this.parameter14 = parameter14;
+        this.parameter15 = parameter15;
+        this.parameter16 = parameter16;
+        this.parameter17 = parameter17;
+        this.parameter18 = parameter18;
+        this.parameter19 = parameter19;
+        this.parameter20 = parameter20;
+        this.parameter21 = parameter21;
+        this.parameter22 = parameter22;
+        this.parameter23 = parameter23;
+        this.parameter24 = parameter24;
+        this.parameter25 = parameter25;
+        this.parameter26 = parameter26;
+        this.parameter27 = parameter27;
+        this.parameter28 = parameter28;
+        this.parameter29 = parameter29;
+        this.parameter30 = parameter30;
+        this.parameter31 = parameter31;
+        this.parameter32 = parameter32;
+        this.parameter33 = parameter33;
+        this.parameter34 = parameter34;
+        this.parameter35 = parameter35;
+        this.parameter36 = parameter36;
+        this.parameter37 = parameter37;
+        this.parameter38 = parameter38;
+    }
+
+    public Parameters(int id, double parameter1, double parameter2, double parameter3, double parameter4, double parameter5, double parameter6, double parameter7, double parameter8, double parameter9, double parameter10, double parameter11, double parameter12, double parameter13, double parameter14, double parameter15, double parameter16, double parameter17, double parameter18, double parameter19, double parameter20, double parameter21, double parameter22, double parameter23, double parameter24, double parameter25, double parameter26, double parameter27, double parameter28, double parameter29, double parameter30, double parameter31, double parameter32, double parameter33, double parameter34, double parameter35, double parameter36, double parameter37, double parameter38) {
+        this.id = id;
+        this.parameter1 = parameter1;
+        this.parameter2 = parameter2;
+        this.parameter3 = parameter3;
+        this.parameter4 = parameter4;
+        this.parameter5 = parameter5;
+        this.parameter6 = parameter6;
+        this.parameter7 = parameter7;
+        this.parameter8 = parameter8;
+        this.parameter9 = parameter9;
+        this.parameter10 = parameter10;
+        this.parameter11 = parameter11;
+        this.parameter12 = parameter12;
+        this.parameter13 = parameter13;
+        this.parameter14 = parameter14;
+        this.parameter15 = parameter15;
+        this.parameter16 = parameter16;
+        this.parameter17 = parameter17;
+        this.parameter18 = parameter18;
+        this.parameter19 = parameter19;
+        this.parameter20 = parameter20;
+        this.parameter21 = parameter21;
+        this.parameter22 = parameter22;
+        this.parameter23 = parameter23;
+        this.parameter24 = parameter24;
+        this.parameter25 = parameter25;
+        this.parameter26 = parameter26;
+        this.parameter27 = parameter27;
+        this.parameter28 = parameter28;
+        this.parameter29 = parameter29;
+        this.parameter30 = parameter30;
+        this.parameter31 = parameter31;
+        this.parameter32 = parameter32;
+        this.parameter33 = parameter33;
+        this.parameter34 = parameter34;
+        this.parameter35 = parameter35;
+        this.parameter36 = parameter36;
+        this.parameter37 = parameter37;
+        this.parameter38 = parameter38;
+    }
 
     public int getId() {
         return id;

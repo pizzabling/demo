@@ -13,236 +13,295 @@
 <div class="container">
     <div class="row">
         <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">1c Сотрудник</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" data-th-href="@{/}">Домой <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/rentCalc}" data-toggle="tooltip"
+                               title="Здесь вы можете поместить сотрудников в отдельную группу и рассчитать их совместную рентабельность">Рассчитать
+                                лучшую группу</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/params}" data-toggle="tooltip"
+                               title="Здесь вы можете задать параметры по каждому виду сигарет для рассчёта лучшей группы">
+                                Задать параметры
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/bestsGroup}" data-toggle="tooltip"
+                               title="Посмотреть лучшие группы">
+                                Лучшая группа
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Меню
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </nav>
             <h1>Добавление сотрудника</h1>
             <div>
-            <form data-th-action="@{/add}" method="post">
+                <form data-th-action="@{/add}" method="post">
 
-                <div class="form-group">
-                    <label for="workerId">workerId</label>
-                    <input type="number" name="workerId" class="form-control" id="workerId" placeholder="Айди">
-                </div>
-                <div class="form-group">
-                    <label for="name">Ф.И.О.</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Иванов Иван Иванович">
+                    <div class="form-group">
+                        <label for="workerId">workerId</label>
+                        <input type="number" name="workerId" class="form-control" id="workerId" placeholder="Айди">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Ф.И.О.</label>
+                        <input type="text" name="name" class="form-control" id="name"
+                               placeholder="Иванов Иван Иванович">
 
-                </div>
+                    </div>
 
-                <div class="form-group">
-                    <label for="rent">Общая рентабельность</label>
-                    <input type="number" name="rent" class="form-control" id="rent" placeholder="Рентабельность">
-                </div>
+                    <div class="form-group">
+                        <label for="rent">Общая рентабельность</label>
+                        <input type="number" name="rent" class="form-control" id="rent" placeholder="Рентабельность">
+                    </div>
 
-                <div class="form-group">
-                    <label for="janRent">Рентабельность за январь</label>
-                    <input type="number" name="janRent" class="form-control" id="janRent" placeholder="Январь">
-                </div>
+                    <div class="form-group">
+                        <label for="janRent">Рентабельность за январь</label>
+                        <input type="number" name="janRent" class="form-control" id="janRent" placeholder="Январь">
+                    </div>
 
-                <div class="form-group">
-                    <label for="febRent">Рентабельность за февраль</label>
-                    <input type="number" name="febRent" class="form-control" id="febRent" placeholder="Февраль">
-                </div>
+                    <div class="form-group">
+                        <label for="febRent">Рентабельность за февраль</label>
+                        <input type="number" name="febRent" class="form-control" id="febRent" placeholder="Февраль">
+                    </div>
 
-                <div class="form-group">
-                    <label for="marRent">Рентабельность за март</label>
-                    <input type="number" name="marRent" class="form-control" id="marRent" placeholder="Март">
-                </div>
+                    <div class="form-group">
+                        <label for="marRent">Рентабельность за март</label>
+                        <input type="number" name="marRent" class="form-control" id="marRent" placeholder="Март">
+                    </div>
 
-                <div class="form-group">
-                    <label for="aprRent">Рентабельность за апрель</label>
-                    <input type="number" name="aprRent" class="form-control" id="aprRent" placeholder="Апрель">
-                </div>
+                    <div class="form-group">
+                        <label for="aprRent">Рентабельность за апрель</label>
+                        <input type="number" name="aprRent" class="form-control" id="aprRent" placeholder="Апрель">
+                    </div>
 
-                <div class="form-group">
-                    <label for="mayRent">Рентабельность за май</label>
-                    <input type="number" name="mayRent" class="form-control" id="mayRent" placeholder="Май">
-                </div>
+                    <div class="form-group">
+                        <label for="mayRent">Рентабельность за май</label>
+                        <input type="number" name="mayRent" class="form-control" id="mayRent" placeholder="Май">
+                    </div>
 
-                <div class="form-group">
-                    <label for="juneRent">Рентабельность за июнь</label>
-                    <input type="number" name="juneRent" class="form-control" id="juneRent" placeholder="Июнь">
-                </div>
+                    <div class="form-group">
+                        <label for="juneRent">Рентабельность за июнь</label>
+                        <input type="number" name="juneRent" class="form-control" id="juneRent" placeholder="Июнь">
+                    </div>
 
-                <div class="form-group">
-                    <label for="julyRent">Рентабельность за июль</label>
-                    <input type="number" name="julyRent" class="form-control" id="julyRent" placeholder="Июль">
-                </div>
+                    <div class="form-group">
+                        <label for="julyRent">Рентабельность за июль</label>
+                        <input type="number" name="julyRent" class="form-control" id="julyRent" placeholder="Июль">
+                    </div>
 
-                <div class="form-group">
-                    <label for="augRent">Рентабельность за август</label>
-                    <input type="number" name="augRent" class="form-control" id="augRent" placeholder="Август">
-                </div>
+                    <div class="form-group">
+                        <label for="augRent">Рентабельность за август</label>
+                        <input type="number" name="augRent" class="form-control" id="augRent" placeholder="Август">
+                    </div>
 
-                <div class="form-group">
-                    <label for="sepRent">Рентабельность за сентябрь</label>
-                    <input type="number" name="sepRent" class="form-control" id="sepRent" placeholder="Сентябрь">
-                </div>
+                    <div class="form-group">
+                        <label for="sepRent">Рентабельность за сентябрь</label>
+                        <input type="number" name="sepRent" class="form-control" id="sepRent" placeholder="Сентябрь">
+                    </div>
 
-                <div class="form-group">
-                    <label for="octRent">Рентабельность за октябрь</label>
-                    <input type="number" name="octRent" class="form-control" id="octRent" placeholder="Октябрь">
-                </div>
+                    <div class="form-group">
+                        <label for="octRent">Рентабельность за октябрь</label>
+                        <input type="number" name="octRent" class="form-control" id="octRent" placeholder="Октябрь">
+                    </div>
 
-                <div class="form-group">
-                    <label for="novRent">Рентабельность за ноябрь</label>
-                    <input type="number" name="novRent" class="form-control" id="novRent" placeholder="Ноябрь">
-                </div>
+                    <div class="form-group">
+                        <label for="novRent">Рентабельность за ноябрь</label>
+                        <input type="number" name="novRent" class="form-control" id="novRent" placeholder="Ноябрь">
+                    </div>
 
-                <div class="form-group">
-                    <label for="decRent">Рентабельность за декабрь</label>
-                    <input type="number" name="decRent" class="form-control" id="decRent" placeholder="Декабрь">
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="bond" value="1">
-                    <label class="form-check-label" for="bond">bond</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="kent" value="1">
-                    <label class="form-check-label" for="kent">kent</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Parlament" value="1">
-                    <label class="form-check-label" for="Parlament">Parlament</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Winston" value="1">
-                    <label class="form-check-label" for="Winston">Winston</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Lm" value="1">
-                    <label class="form-check-label" for="Lm">Lm</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Malboro" value="1">
-                    <label class="form-check-label" for="Malboro">Malboro</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Rothmans" value="1">
-                    <label class="form-check-label" for="Rothmans">Rothmans</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Ld" value="1">
-                    <label class="form-check-label" for="Ld">Ld</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Morris" value="1">
-                    <label class="form-check-label" for="Morris">Morris</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Aliance" value="1">
-                    <label class="form-check-label" for="Aliance">Aliance</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Java" value="1">
-                    <label class="form-check-label" for="Java">Java</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Optima" value="1">
-                    <label class="form-check-label" for="Optima">Optima</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Petr" value="1">
-                    <label class="form-check-label" for="Petr">Petr</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Maksim" value="1">
-                    <label class="form-check-label" for="Maksim">Maksim</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Crests" value="1">
-                    <label class="form-check-label" for="Crests">Crests</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Vog" value="1">
-                    <label class="form-check-label" for="Vog">Vog</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Glamur" value="1">
-                    <label class="form-check-label" for="Glamur">Glamur</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Kiss" value="1">
-                    <label class="form-check-label" for="Kiss">Kiss</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Esse" value="1">
-                    <label class="form-check-label" for="Esse">Esse</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Quin" value="1">
-                    <label class="form-check-label" for="Quin">Quin</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Lady" value="1">
-                    <label class="form-check-label" for="Lady">Lady</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Mor" value="1">
-                    <label class="form-check-label" for="Mor">Mor</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Chester" value="1">
-                    <label class="form-check-label" for="Chester">Chester</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Stuardessa" value="1">
-                    <label class="form-check-label" for="Stuardessa">Stuardessa</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Stolichniye" value="1">
-                    <label class="form-check-label" for="Stolichniye">Stolichniye</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Donskoy" value="1">
-                    <label class="form-check-label" for="Donskoy">Donskoy</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Troyka" value="1">
-                    <label class="form-check-label" for="Troyka">Troyka</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Fast" value="1">
-                    <label class="form-check-label" for="Fast">Fast</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Royal" value="1">
-                    <label class="form-check-label" for="Royal">Royal</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Manchester" value="1">
-                    <label class="form-check-label" for="Manchester">Manchester</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Prestigue" value="1">
-                    <label class="form-check-label" for="Prestigue">Prestigue</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Premier" value="1">
-                    <label class="form-check-label" for="Premier">Premier</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Cosmos" value="1">
-                    <label class="form-check-label" for="Cosmos">Cosmos</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Next" value="1">
-                    <label class="form-check-label" for="Next">Next</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Magnat" value="1">
-                    <label class="form-check-label" for="Magnat">Magnat</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Minsk" value="1">
-                    <label class="form-check-label" for="Minsk">Minsk</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="Souz" value="1">
-                    <label class="form-check-label" for="Souz">Souz</label>
-                </div>
+                    <div class="form-group">
+                        <label for="decRent">Рентабельность за декабрь</label>
+                        <input type="number" name="decRent" class="form-control" id="decRent" placeholder="Декабрь">
+                    </div>
 
+                    <div class="form-group">
+                        <label for="comment">Комментарий</label>
+                        <textarea class="form-control" id="comment" rows="5"></textarea>
+                    </div>
 
-                <button>Добавить</button>
-            </form>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="bond" data-th-value="1">
+                        <label class="form-check-label" for="bond">bond</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="kent" data-th-value="1">
+                        <label class="form-check-label" for="kent">kent</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="parlament" data-th-value="1">
+                        <label class="form-check-label" for="Parlament">Parlament</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Winston" data-th-value="1">
+                        <label class="form-check-label" for="Winston">Winston</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Lm" data-th-value="1">
+                        <label class="form-check-label" for="Lm">Lm</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Malboro" data-th-value="1">
+                        <label class="form-check-label" for="Malboro">Malboro</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Rothmans" data-th-value="1">
+                        <label class="form-check-label" for="Rothmans">Rothmans</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Ld" data-th-value="1">
+                        <label class="form-check-label" for="Ld">Ld</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Morris" data-th-value="1">
+                        <label class="form-check-label" for="Morris">Morris</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Aliance" data-th-value="1">
+                        <label class="form-check-label" for="Aliance">Aliance</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Java" data-th-value="1">
+                        <label class="form-check-label" for="Java">Java</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Optima" data-th-value="1">
+                        <label class="form-check-label" for="Optima">Optima</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Petr" data-th-value="1">
+                        <label class="form-check-label" for="Petr">Petr</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Maksim" data-th-value="1">
+                        <label class="form-check-label" for="Maksim">Maksim</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Crests" data-th-value="1">
+                        <label class="form-check-label" for="Crests">Crests</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Vog" data-th-value="1">
+                        <label class="form-check-label" for="Vog">Vog</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Glamur" data-th-value="1">
+                        <label class="form-check-label" for="Glamur">Glamur</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Kiss" data-th-value="1">
+                        <label class="form-check-label" for="Kiss">Kiss</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Esse" data-th-value="1">
+                        <label class="form-check-label" for="Esse">Esse</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Quin" data-th-value="1">
+                        <label class="form-check-label" for="Quin">Quin</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Lady" data-th-value="1">
+                        <label class="form-check-label" for="Lady">Lady</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Mor" data-th-value="1">
+                        <label class="form-check-label" for="Mor">Mor</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Chester" data-th-value="1">
+                        <label class="form-check-label" for="Chester">Chester</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Stuardessa" data-th-value="1">
+                        <label class="form-check-label" for="Stuardessa">Stuardessa</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Stolichniye" data-th-value="1">
+                        <label class="form-check-label" for="Stolichniye">Stolichniye</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Donskoy" data-th-value="1">
+                        <label class="form-check-label" for="Donskoy">Donskoy</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Troyka" data-th-value="1">
+                        <label class="form-check-label" for="Troyka">Troyka</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Fast" data-th-value="1">
+                        <label class="form-check-label" for="Fast">Fast</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Royal" data-th-value="1">
+                        <label class="form-check-label" for="Royal">Royal</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Manchester" data-th-value="1">
+                        <label class="form-check-label" for="Manchester">Manchester</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Prestigue" data-th-value="1">
+                        <label class="form-check-label" for="Prestigue">Prestigue</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Premier" data-th-value="1">
+                        <label class="form-check-label" for="Premier">Premier</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Cosmos" data-th-value="1">
+                        <label class="form-check-label" for="Cosmos">Cosmos</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Next" data-th-value="1">
+                        <label class="form-check-label" for="Next">Next</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Magnat" data-th-value="1">
+                        <label class="form-check-label" for="Magnat">Magnat</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Minsk" data-th-value="1">
+                        <label class="form-check-label" for="Minsk">Minsk</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="Souz" data-th-value="1">
+                        <label class="form-check-label" for="Souz">Souz</label>
+                    </div>
+
+                    <div>
+                        <button>Добавить</button>
+                    </div>
+
+                </form>
             </div>
         </div>
     </div>
