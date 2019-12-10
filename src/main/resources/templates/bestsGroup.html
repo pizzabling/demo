@@ -64,7 +64,16 @@
                 </div>
             </nav>
             <h1>Лучшая группа</h1>
-
+            <h4>Прежде, чем начинать расчёт, задайте <a data-th-href="@{/params}">параметры</a>, иначе расчёт начнётся
+                с параметрами, равными нулю!!!</h4>
+            <form data-th-action="@{/bestsGroup}">
+                <div>
+                    <label for="num">Рассчитать группу из:</label>
+                    <input type="number" class="form-control" name="num" id="num"
+                    placeholder="N человек">
+                </div>
+                <button>Рассчитать</button>
+            </form>
             <div data-th-each="best:${best}">
             <table class="table">
                 <thead>

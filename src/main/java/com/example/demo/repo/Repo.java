@@ -1,14 +1,11 @@
 package com.example.demo.repo;
 
-import com.example.demo.domain.*;
+import com.example.demo.domain.Worker;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.*;
+import java.util.List;
 
 @Repository
 public class Repo {
@@ -30,9 +27,7 @@ public class Repo {
     private static final String SAVE_WORKER = "insert into WORKERS (workerId,rent,janRent,febRent,marRent,aprRent,mayRent,juneRent,julyRent,augRent,sepRent,octRent,novRent,decRent,NAME,RATIO,COMMENT) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     private static final String SAVE_PARSE_WORKER = "insert into WORKERS(workerId,rent,RATIO) values (?,?,?)";
     private static final String UPDATE_WORKER = "UPDATE WORKERS set NAME=?, WORKERID=?,RENT=?,RATIO=?, COMMENT=? where id=?";
-    private static final String GET_SIGARETS_PARAMETERS = "SELECT id,bond,kent,parlament,winston,lm,malboro,rotmans,ld,fmorris,aliance,java,optima,petr,maksim,crests,vog,glamur,kiss,esse,quin,lady,mor,chester,radopy,stuardessa,stolichniye,donskoy,troyka,fast,royal,manchester,prestigue,premier,cosmos,next,magnat,minsk,souz from sigarets";
-    private static final String FIND_SIGARETS_BY_ID = "SELECT id,bond,kent,parlament,winston,lm,malboro,rotmans,ld,fmorris,aliance,java,optima,petr,maksim,crests,vog,glamur,kiss,esse,quin,lady,mor,chester,radopy,stuardessa,stolichniye,donskoy,troyka,fast,royal,manchester,prestigue,premier,cosmos,next,magnat,minsk,souz from sigarets where id = ?";
-    private static final String UPDATE_SIGARETS = "UPDATE SIGARETS set bond=?,kent=?,parlament=?,winston=?,lm=?,malboro=?,rotmans=?,ld=?,fmorris=?,aliance=?,java=?,optima=?,petr=?,maksim=?,crests=?,vog=?,glamur=?,kiss=?,esse=?,quin=?,lady=?,mor=?,chester=?,radopy=?,stuardessa=?,stolichniye=?,donskoy=?,troyka=?,fast=?,royal=?,manchester=?,prestigue=?,premier=?,cosmos=?,next=?,magnat=?,minsk=?,souz=? where id=?";
+
 
 
     public List<Worker> getWorkers() {
@@ -182,8 +177,112 @@ public class Repo {
     }
 
     public void deleteAllWorkers(){
-        jdbcTemplate.update("DELETE FROM WORKERS");
-        jdbcTemplate.update("DELETE FROM SIGARETS");
+//        jdbcTemplate.update("DELETE FROM WORKERS");
+        jdbcTemplate.update("DROP TABLE WORKERS");
+        jdbcTemplate.update("CREATE TABLE IF NOT EXISTS workers\n" +
+                "(\n" +
+                "    id          INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,\n" +
+                "    workerId    VARCHAR(30),\n" +
+                "    rent        DOUBLE,\n" +
+                "    janRent     DOUBLE,\n" +
+                "    febRent     DOUBLE,\n" +
+                "    marRent     DOUBLE,\n" +
+                "    aprRent     DOUBLE,\n" +
+                "    mayRent     DOUBLE,\n" +
+                "    juneRent    DOUBLE,\n" +
+                "    julyRent    DOUBLE,\n" +
+                "    augRent     DOUBLE,\n" +
+                "    sepRent     DOUBLE,\n" +
+                "    octRent     DOUBLE,\n" +
+                "    novRent     DOUBLE,\n" +
+                "    decRent     DOUBLE,\n" +
+                "    name        TEXT,\n" +
+                "    ratio       DOUBLE,\n" +
+                "    comment     TEXT,\n" +
+                "\n" +
+                "    bond        DOUBLE,\n" +
+                "    kent        DOUBLE,\n" +
+                "    parlament   DOUBLE,\n" +
+                "    winston     DOUBLE,\n" +
+                "    lm          DOUBLE,\n" +
+                "    malboro     DOUBLE,\n" +
+                "    rotmans     DOUBLE,\n" +
+                "    ld          DOUBLE,\n" +
+                "    fmorris     DOUBLE,\n" +
+                "    aliance     DOUBLE,\n" +
+                "    java        DOUBLE,\n" +
+                "    optima      DOUBLE,\n" +
+                "    petr        DOUBLE,\n" +
+                "    maksim      DOUBLE,\n" +
+                "    crests      DOUBLE,\n" +
+                "    vog         DOUBLE,\n" +
+                "    glamur      DOUBLE,\n" +
+                "    kiss        DOUBLE,\n" +
+                "    esse        DOUBLE,\n" +
+                "    quin        DOUBLE,\n" +
+                "    lady        DOUBLE,\n" +
+                "    mor         DOUBLE,\n" +
+                "    chester     DOUBLE,\n" +
+                "    radopy      DOUBLE,\n" +
+                "    stuardessa  DOUBLE,\n" +
+                "    stolichniye DOUBLE,\n" +
+                "    donskoy     DOUBLE,\n" +
+                "    troyka      DOUBLE,\n" +
+                "    fast        DOUBLE,\n" +
+                "    royal       DOUBLE,\n" +
+                "    manchester  DOUBLE,\n" +
+                "    prestigue   DOUBLE,\n" +
+                "    premier     DOUBLE,\n" +
+                "    cosmos      DOUBLE,\n" +
+                "    next        DOUBLE,\n" +
+                "    magnat      DOUBLE,\n" +
+                "    minsk       DOUBLE,\n" +
+                "    souz        DOUBLE\n" +
+                ");\n"
+                );
+        jdbcTemplate.update("DROP TABLE SIGARETS");
+        jdbcTemplate.update("CREATE TABLE IF NOT EXISTS SIGARETS\n" +
+                "(\n" +
+                "    id          INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,\n" +
+                "    bond        DOUBLE,\n" +
+                "    kent        DOUBLE,\n" +
+                "    parlament   DOUBLE,\n" +
+                "    winston     DOUBLE,\n" +
+                "    lm          DOUBLE,\n" +
+                "    malboro     DOUBLE,\n" +
+                "    rotmans     DOUBLE,\n" +
+                "    ld          DOUBLE,\n" +
+                "    fmorris     DOUBLE,\n" +
+                "    aliance     DOUBLE,\n" +
+                "    java        DOUBLE,\n" +
+                "    optima      DOUBLE,\n" +
+                "    petr        DOUBLE,\n" +
+                "    maksim      DOUBLE,\n" +
+                "    crests      DOUBLE,\n" +
+                "    vog         DOUBLE,\n" +
+                "    glamur      DOUBLE,\n" +
+                "    kiss        DOUBLE,\n" +
+                "    esse        DOUBLE,\n" +
+                "    quin        DOUBLE,\n" +
+                "    lady        DOUBLE,\n" +
+                "    mor         DOUBLE,\n" +
+                "    chester     DOUBLE,\n" +
+                "    radopy      DOUBLE,\n" +
+                "    stuardessa  DOUBLE,\n" +
+                "    stolichniye DOUBLE,\n" +
+                "    donskoy     DOUBLE,\n" +
+                "    troyka      DOUBLE,\n" +
+                "    fast        DOUBLE,\n" +
+                "    royal       DOUBLE,\n" +
+                "    manchester  DOUBLE,\n" +
+                "    prestigue   DOUBLE,\n" +
+                "    premier     DOUBLE,\n" +
+                "    cosmos      DOUBLE,\n" +
+                "    next        DOUBLE,\n" +
+                "    magnat      DOUBLE,\n" +
+                "    minsk       DOUBLE,\n" +
+                "    souz        DOUBLE\n" +
+                ");");
         jdbcTemplate.update("DELETE FROM TEMPORARYRESULTFORSIGARETS");
     }
     public void saveWorker(Worker worker) {

@@ -1,17 +1,12 @@
 package com.example.demo.service;
 
-import com.example.demo.repo.Repo;
-import com.example.demo.repo.SigaretsRepo;
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 @Service
@@ -127,15 +122,5 @@ public class ParseWorkersService {
                     premier, cosmos, next, magnat, minsk, souz);
             service.saveParceWorker(workerId, rent);
         }
-
     }
-
-//    public void parseSigaretsFromExcel() throws IOException {
-//
-//        String file = "F:/read1.xls";
-//        Workbook wb = new HSSFWorkbook(new FileInputStream(file));
-//        for (j=0;j<473;j++){
-//
-//        }
-//    }
 }

@@ -1,12 +1,14 @@
 package com.example.demo.controller;
 
 import com.example.demo.domain.*;
+import com.example.demo.service.BestGroupService;
 import com.example.demo.service.GroupService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
 
@@ -14,11 +16,61 @@ import javax.validation.Valid;
 public class GroupController {
 
     private final GroupService groupService;
+    private final BestGroupService bestGroupService;
 
-    public GroupController(GroupService groupService) {
+    public GroupController(GroupService groupService, BestGroupService bestGroupService) {
 
         this.groupService = groupService;
+        this.bestGroupService = bestGroupService;
     }
+    @GetMapping("/bestsGroup")
+    public String bestsGroup(Model model) {
+        model.addAttribute("bests", bestGroupService.getAllBestGroup());
+        return "bestsGroup";
+    }
+    @PostMapping("/bestsGroup")
+    public String testAllGroup(@RequestParam int num,Model model){
+        bestGroupService.setNum(num);
+        return "bestsGroup";
+    }
+
+    @PostMapping("/bestGroup2")
+    public String calcBestGroup2(Model model){
+        bestGroupService.saveBestGroup2();
+        return "bestsGroup";
+    }
+    @PostMapping("/bestGroup3")
+    public String calcBestGroup3(Model model){
+        bestGroupService.saveBestGroup3();
+        return "bestsGroup";
+    }
+    @PostMapping("/bestGroup4")
+    public String calcBestGroup4(Model model){
+        bestGroupService.saveBestGroup4();
+        return "bestsGroup";
+    }
+    @PostMapping("/bestGroup5")
+    public String calcBestGroup5(Model model){
+        bestGroupService.saveBestGroup5();
+        return "bestsGroup";
+    }
+    @PostMapping("/bestGroup6")
+    public String calcBestGroup6(Model model){
+        bestGroupService.saveBestGroup6();
+        return "bestsGroup";
+    }
+    @PostMapping("/bestGroup7")
+    public String calcBestGroup7(Model model){
+        bestGroupService.saveBestGroup7();
+        return "bestsGroup";
+    }
+    @PostMapping("/bestGroup8")
+    public String calcBestGroup8(Model model){
+        bestGroupService.saveBestGroup8();
+        return "bestsGroup";
+    }
+
+
     @GetMapping("/groups")
     public String groups(Model model) {
         model.addAttribute("workers2", groupService.getGroup2());

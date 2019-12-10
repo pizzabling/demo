@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Задать условие</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">1c Сотрудник</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" data-th-href="@{/}">Домой <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/rentCalc}" data-toggle="tooltip"
+                               title="Здесь вы можете поместить сотрудников в отдельную группу и рассчитать их совместную рентабельность">Рассчитать
+                                лучшую группу</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/params}" data-toggle="tooltip"
+                               title="Здесь вы можете задать параметры по каждому виду сигарет для рассчёта лучшей группы">
+                                Задать параметры
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-th-href="@{/bestsGroup}" data-toggle="tooltip"
+                               title="Посмотреть лучшие группы">
+                                Лучшая группа
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Меню
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form data-th-action="@{/paramsGroup}" method="post">
+                <div>
+                    <label for="paramsGroup1">Параметр для первой группы</label>
+                    <input type="number" class="form-control" id="paramsGroup1" name="paramsGroup1"
+                           placeholder="Первая группа">
+                </div>
+                <div>
+                    <label for="paramsGroup2">Параметр для второй группы</label>
+                    <input type="number" class="form-control" id="paramsGroup2" name="paramsGroup2"
+                           placeholder="Первая группа">
+                </div>
+                <div>
+                    <label for="paramsGroup3">Параметр для третьей группы</label>
+                    <input type="number" class="form-control" id="paramsGroup3" name="paramsGroup3"
+                           placeholder="Первая группа">
+                </div>
+                <div>
+                    <label for="paramsGroup4">Параметр для четвёртой группы</label>
+                    <input type="number" class="form-control" id="paramsGroup4" name="paramsGroup4"
+                           placeholder="Первая группа">
+                </div>
+                <div>
+                    <label for="paramsGroup5">Параметр для пятой группы</label>
+                    <input type="number" class="form-control" id="paramsGroup5" name="paramsGroup5"
+                           placeholder="Первая группа">
+                </div>
+                <div>
+                    <label for="paramsGroup6">Параметр для шестой группы</label>
+                    <input type="number" class="form-control" id="paramsGroup6" name="paramsGroup6"
+                           placeholder="Первая группа">
+                </div>
+                <div>
+                    <label for="paramsGroup7">Параметр для седьмой группы</label>
+                    <input type="number" class="form-control" id="paramsGroup7" name="paramsGroup7"
+                           placeholder="Первая группа">
+                </div>
+                <button>Задать</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
