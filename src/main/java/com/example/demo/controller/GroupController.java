@@ -5,10 +5,7 @@ import com.example.demo.service.BestGroupService;
 import com.example.demo.service.GroupService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -23,49 +20,63 @@ public class GroupController {
         this.groupService = groupService;
         this.bestGroupService = bestGroupService;
     }
+
     @GetMapping("/bestsGroup")
     public String bestsGroup(Model model) {
-        model.addAttribute("bests", bestGroupService.getAllBestGroup());
+        model.addAttribute("bgroup2", bestGroupService.getBestGroup2());
+        model.addAttribute("bgroup3", bestGroupService.getBestGroup3());
+        model.addAttribute("bgroup4", bestGroupService.getBestGroup4());
+        model.addAttribute("bgroup5", bestGroupService.getBestGroup5());
+        model.addAttribute("bgroup6", bestGroupService.getBestGroup6());
+        model.addAttribute("bgroup7", bestGroupService.getBestGroup7());
+        model.addAttribute("bgroup8", bestGroupService.getBestGroup8());
         return "bestsGroup";
     }
+
     @PostMapping("/bestsGroup")
-    public String testAllGroup(@RequestParam int num,Model model){
+    public String testAllGroup(@RequestParam int num, Model model) {
         bestGroupService.setNum(num);
         return "bestsGroup";
     }
 
-    @PostMapping("/bestGroup2")
-    public String calcBestGroup2(Model model){
+    @GetMapping("/bestGroup2")
+    public String calcBestGroup2(Model model) {
         bestGroupService.saveBestGroup2();
         return "bestsGroup";
     }
-    @PostMapping("/bestGroup3")
-    public String calcBestGroup3(Model model){
+
+    @GetMapping("/bestGroup3")
+    public String calcBestGroup3(Model model) {
         bestGroupService.saveBestGroup3();
         return "bestsGroup";
     }
-    @PostMapping("/bestGroup4")
-    public String calcBestGroup4(Model model){
+
+    @GetMapping("/bestGroup4")
+    public String calcBestGroup4(Model model) {
         bestGroupService.saveBestGroup4();
         return "bestsGroup";
     }
-    @PostMapping("/bestGroup5")
-    public String calcBestGroup5(Model model){
+
+    @GetMapping("/bestGroup5")
+    public String calcBestGroup5(Model model) {
         bestGroupService.saveBestGroup5();
         return "bestsGroup";
     }
-    @PostMapping("/bestGroup6")
-    public String calcBestGroup6(Model model){
+
+    @GetMapping("/bestGroup6")
+    public String calcBestGroup6(Model model) {
         bestGroupService.saveBestGroup6();
         return "bestsGroup";
     }
-    @PostMapping("/bestGroup7")
-    public String calcBestGroup7(Model model){
+
+    @GetMapping("/bestGroup7")
+    public String calcBestGroup7(Model model) {
         bestGroupService.saveBestGroup7();
         return "bestsGroup";
     }
-    @PostMapping("/bestGroup8")
-    public String calcBestGroup8(Model model){
+
+    @GetMapping("/bestGroup8")
+    public String calcBestGroup8(Model model) {
         bestGroupService.saveBestGroup8();
         return "bestsGroup";
     }
@@ -80,12 +91,14 @@ public class GroupController {
 //        model.addAttribute("workers8", groupService.getGroup8());
         return "groups";
     }
+
     @GetMapping("/group2")
     public String group2(Model model) {
         var group2 = groupService.getGroup2();
         model.addAttribute("workers", group2);
         return "group2";
     }
+
     @GetMapping("/createGroup2")
     public String setParamsGroup2(Model model) {
 
@@ -97,12 +110,14 @@ public class GroupController {
         groupService.addGroup2(groupTwo);
         return "redirect:/";
     }
+
     @GetMapping("/group3")
     public String group3(Model model) {
         var group3 = groupService.getGroup3();
         model.addAttribute("workers", group3);
         return "group3";
     }
+
     @GetMapping("/createGroup3")
     public String setParamsGroup3() {
         return "createGroup3";
@@ -113,6 +128,7 @@ public class GroupController {
         groupService.addGroup3(groupThree);
         return "redirect:/";
     }
+
     @GetMapping("/group4")
     public String group4(Model model) {
         var group4 = groupService.getGroup4();
@@ -130,12 +146,14 @@ public class GroupController {
         groupService.addGroup4(groupFour);
         return "redirect:/";
     }
+
     @GetMapping("/group6")
     public String group6(Model model) {
         var group6 = groupService.getGroup6();
         model.addAttribute("workers", group6);
         return "group6";
     }
+
     @GetMapping("/createGroup6")
     public String setParamsGroup6(Model model) {
         return "createGroup6";
@@ -146,12 +164,14 @@ public class GroupController {
         groupService.addGroup6(groupSix);
         return "redirect:/";
     }
+
     @GetMapping("/group8")
     public String group8(Model model) {
         var group8 = groupService.getGroup8();
         model.addAttribute("workers", group8);
         return "group8";
     }
+
     @GetMapping("/createGroup8")
     public String setParamsGroup8() {
         return "createGroup8";
@@ -161,5 +181,54 @@ public class GroupController {
     public String addGroup8(@ModelAttribute GroupEight groupEight) {
         groupService.addGroup8(groupEight);
         return "redirect:/";
+    }
+
+    @GetMapping("/bGroups2/{id}")
+    public String getBestGroup2ById(@PathVariable int id, Model model) {
+        var group = groupService.getBestGroup2ById(id);
+        model.addAttribute("group", group);
+        return "bGroups2";
+    }
+
+    @GetMapping("/bGroups3/{id}")
+    public String getBestGroup3ById(@PathVariable int id, Model model) {
+        var group = groupService.getBestGroup3ById(id);
+        model.addAttribute("group", group);
+        return "bGroups3";
+    }
+
+    @GetMapping("/bGroups4/{id}")
+    public String getBestGroup4ById(@PathVariable int id, Model model){
+        var group = groupService.getBestGroup4ById(id);
+        model.addAttribute("group",group);
+        return"bGroups4";
+    }
+
+    @GetMapping("/bGroups5/{id}")
+    public String getBestGroup5ById(@PathVariable int id, Model model) {
+        var group = groupService.getBestGroup5ById(id);
+        model.addAttribute("group", group);
+        return "bGroups5";
+    }
+
+    @GetMapping("/bGroups6/{id}")
+    public String getBestGroup6ById(@PathVariable int id, Model model){
+        var group = groupService.getBestGroup6ById(id);
+        model.addAttribute("group",group);
+        return"bGroups6";
+    }
+
+    @GetMapping("/bGroups7/{id}")
+    public String getBestGroup7ById(@PathVariable int id, Model model) {
+        var group = groupService.getBestGroup7ById(id);
+        model.addAttribute("group", group);
+        return "bGroups7";
+    }
+
+    @GetMapping("/bGroups8/{id}")
+    public String getBestGroup8ById(@PathVariable int id, Model model){
+        var group = groupService.getBestGroup8ById(id);
+        model.addAttribute("group",group);
+        return"bGroups8";
     }
 }

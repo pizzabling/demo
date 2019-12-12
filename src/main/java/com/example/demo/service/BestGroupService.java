@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.ResultSigarets;
+import com.example.demo.domain.bestGroup.*;
 import com.example.demo.repo.GroupRepo;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -56,17 +56,35 @@ public class BestGroupService {
 
     public void getTiming() {
         Date date = new Date();
-        System.out.println(date.toString());
+        System.out.println("Рассчёт окончен в: "+date.toString());
     }
 
-    public List<ResultSigarets> getAllBestGroup() {
-
-        return repo.getAllBestsGroup();
+    public List<ResultSigarets2> getBestGroup2() {
+        return repo.getBestGroups2();
     }
+    public List<ResultSigarets3> getBestGroup3() {
+        return repo.getBestGroup3();
+    }
+    public List<ResultSigarets4> getBestGroup4() {
+        return repo.getBestGroup4();
+    }
+    public List<ResultSigarets5> getBestGroup5() {
+        return repo.getBestGroup5();
+    }
+    public List<ResultSigarets6> getBestGroup6() {
+        return repo.getBestGroup6();
+    }
+    public List<ResultSigarets7> getBestGroup7() {
+        return repo.getBestGroup7();
+    }
+    public List<ResultSigarets8> getBestGroup8() {
+        return repo.getBestGroup8();
+    }
+
 
     public void saveBestGroup2() {
         Date date = new Date();
-        System.out.println(date.toString());
+        System.out.println("Рассчёт группы из 2 начат в: " + date.toString());
         var parameters = paramsService.findParamsById(1);
         double bond1;
         double bond2;
@@ -157,11 +175,11 @@ public class BestGroupService {
         int count2;
         int j = 2;
         //Первый сотрудник
-        for (count1 = i; count1 < 50; count1++) {
+        for (count1 = i; count1 < 100; count1++) {
             var worker1 = service.findWorkerById(count1);
             var sigarets1 = sigaretsService.getSigaretsById(count1);
             //Второй сотрудник
-            for (count2 = j; count2 < 50; count2++) {
+            for (count2 = j; count2 < 100; count2++) {
                 var worker2 = service.findWorkerById(count2);
                 var sigarets2 = sigaretsService.getSigaretsById(count2);
                 //Процент оклада первого
@@ -593,7 +611,7 @@ public class BestGroupService {
 
     public void saveBestGroup3() {
         Date date = new Date();
-        System.out.println(date.toString());
+        System.out.println("Рассчёт группы из 3" + date.toString());
         var parameters = paramsService.findParamsById(1);
         double bond1;
         double bond2;
@@ -1222,7 +1240,7 @@ public class BestGroupService {
 
     public void saveBestGroup4() {
         Date date = new Date();
-        System.out.println(date.toString());
+        System.out.println("Рассчёт группы из 4" + date.toString());
         var parameters = paramsService.findParamsById(1);
         double bond1;
         double bond2;
@@ -2002,7 +2020,7 @@ public class BestGroupService {
 
     public void saveBestGroup5() {
         Date date = new Date();
-        System.out.println(date.toString());
+        System.out.println("Рассчёт группы из 5" + date.toString());
         var parameters = paramsService.findParamsById(1);
         double bond1;
         double bond2;
@@ -2888,7 +2906,7 @@ public class BestGroupService {
 
     public void saveBestGroup6() {
         Date date = new Date();
-        System.out.println(date.toString());
+        System.out.println("Рассчёт группы из 6" + date.toString());
         var parameters = paramsService.findParamsById(1);
         double bond1;
         double bond2;
@@ -3879,7 +3897,7 @@ public class BestGroupService {
 
     public void saveBestGroup7() {
         Date date = new Date();
-        System.out.println(date.toString());
+        System.out.println("Рассчёт группы из 7" + date.toString());
         var parameters = paramsService.findParamsById(1);
         double bond1;
         double bond2;
@@ -4968,7 +4986,7 @@ public class BestGroupService {
 
     public void saveBestGroup8() {
         Date date = new Date();
-        System.out.println(date.toString());
+        System.out.println("Рассчёт группы из 8" + date.toString());
         var parameters = paramsService.findParamsById(1);
         double bond1;
         double bond2;

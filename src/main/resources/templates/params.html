@@ -76,343 +76,184 @@
                     </form>
                 </div>
             </nav>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Меню
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="/paramsAll">Условие для всех</a>
-                    <a class="dropdown-item" href="/paramsGroup">Условия для групп</a>
-                    <a class="dropdown-item" href="/params">Условие для каждого</a>
+            <div>
+                <a data-th-href="@{/paramsEach}">
+                    <button>Задать параметры по каждому виду отдельно</button>
+                </a>
+                <a data-th-href="@{/paramsGroup}">
+                    <button>Задать параметры по группам</button>
+                </a>
+                <a data-th-href="@{/paramsAll}">
+                    <button>Задать параметры для всех одновременно</button>
+                </a>
+            </div>
+            <div>
+                <h6>На данный момент установлены параметры:</h6>
+                <div class="table-responsive">
+                    <table class="table table-hover shoplist col-12 col-md-8">
+                        <thead>
+                        <tr>
+                            <th class="col">Название</th>
+                            <th class="col">Параметр</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Bond</td>
+                            <td>[[${params.getParameter1()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Kent</td>
+                            <td>[[${params.getParameter2()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Parlament</td>
+                            <td>[[${params.getParameter3()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Winston</td>
+                            <td>[[${params.getParameter4()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Lm</td>
+                            <td>[[${params.getParameter5()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Malboro</td>
+                            <td>[[${params.getParameter6()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Rothmans</td>
+                            <td>[[${params.getParameter7()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Ld</td>
+                            <td>[[${params.getParameter8()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Morris</td>
+                            <td>[[${params.getParameter9()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Aliance</td>
+                            <td>[[${params.getParameter10()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>[[${params.getParameter11()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Optima</td>
+                            <td>[[${params.getParameter12()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Petr</td>
+                            <td>[[${params.getParameter13()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Maksim</td>
+                            <td>[[${params.getParameter14()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Кресты</td>
+                            <td>[[${params.getParameter15()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Vog</td>
+                            <td>[[${params.getParameter16()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Гламур</td>
+                            <td>[[${params.getParameter17()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Kiss</td>
+                            <td>[[${params.getParameter18()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Esse</td>
+                            <td>[[${params.getParameter19()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Quin</td>
+                            <td>[[${params.getParameter20()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Lady</td>
+                            <td>[[${params.getParameter21()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Mor</td>
+                            <td>[[${params.getParameter22()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Chesterfield</td>
+                            <td>[[${params.getParameter23()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Radopy</td>
+                            <td>[[${params.getParameter24()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Stuardessa</td>
+                            <td>[[${params.getParameter25()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Stolichniye</td>
+                            <td>[[${params.getParameter26()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Донской</td>
+                            <td>[[${params.getParameter27()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Тройка</td>
+                            <td>[[${params.getParameter28()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Fast</td>
+                            <td>[[${params.getParameter29()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Royal</td>
+                            <td>[[${params.getParameter30()}]]</td>
+                        </tr>
+                        <tr>
+                           <td>Manchester</td>
+                            <td>[[${params.getParameter31()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Prestigue</td>
+                            <td>[[${params.getParameter32()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Premier</td>
+                            <td>[[${params.getParameter33()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Cosmos</td>
+                            <td>[[${params.getParameter34()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Next</td>
+                            <td>[[${params.getParameter35()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Magnat</td>
+                            <td>[[${params.getParameter36()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Минск</td>
+                            <td>[[${params.getParameter37()}]]</td>
+                        </tr>
+                        <tr>
+                            <td>Союз</td>
+                            <td>[[${params.getParameter38()}]]</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <form data-th-action="@{/params}" method="post">
-                <div>
-                    <table class="table table-hover shoplist col-12 col-md-8">
-                        <thead>
-                        <tr>
-                            <th class="col" scope="col">Bond</th>
-                            <th class="col" scope="col">Kent</th>
-                            <th class="col" scope="col">Parlametn</th>
-                            <th class="col" scope="col">Winston</th>
-                            <th scope="col" class="col">LM</th>
-                            <th scope="col" class="col">Malboro</th>
-                            <th scope="col" class="col">Rothmans</th>
-                            <th scope="col" class="col">LD</th>
-
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <div>
-
-                                    </label><input type="number" name="parameter1" class="col" id="parameter1"
-                                                   placeholder="Bond">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-
-                                    <input type="number" name="parameter2" class="col" id="parameter2"
-                                           placeholder="Kent">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter3" class="col" id="parameter3"
-                                           placeholder="Parlament">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter4" class="col" id="parameter4"
-                                           placeholder="Winston">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter5" class="col" id="parameter5"
-                                           placeholder="Lm">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter6" class="col" id="parameter6"
-                                           placeholder="Malboro">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter7" class="col" id="parameter7"
-                                           placeholder="Rothmans">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter8" class="col" id="parameter8"
-                                           placeholder="Ld">
-                                </div>
-                            </td>
-
-                        </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-hover shoplist col-12 col-md-8">
-                        <thead>
-                        <tr>
-                            <th scope="col" class="col">Philip Morris</th>
-                            <th scope="col" class="col">Aliance</th>
-                            <th scope="col" class="col">Java</th>
-                            <th scope="col" class="col">Optima</th>
-                            <th scope="col" class="col">Пётр</th>
-                            <th scope="col" class="col">Максим</th>
-                            <th scope="col" class="col">Кресты</th>
-                            <th scope="col" class="col">Vog</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter9" class="col" id="parameter9"
-                                           placeholder="Morris">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter10" class="col" id="parameter10"
-                                           placeholder="Aliance">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter11" class="col" id="parameter11"
-                                           placeholder="Java">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter12" class="col" id="parameter12"
-                                           placeholder="Optima">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter13" class="col" id="parameter13"
-                                           placeholder="Petr">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter14" class="col" id="parameter14"
-                                           placeholder="Maksim">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter15" class="col" id="parameter15"
-                                           placeholder="Кресты">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter16" class="col" id="parameter16"
-                                           placeholder="Vog">
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-hover shoplist col-12 col-md-8">
-                        <thead>
-                        <tr>
-                            <th scope="col" class="col">Гламур</th>
-                            <th scope="col" class="col">Kiss</th>
-                            <th scope="col" class="col">Esse</th>
-                            <th scope="col" class="col">Quin</th>
-                            <th scope="col" class="col">Lady</th>
-                            <th scope="col" class="col">Мор</th>
-                            <th scope="col" class="col">Chester</th>
-                            <th scope="col" class="col">Радопи</th>
-
-                        </tr>
-                        </thead>
-                        <tbody></tbody>
-                        <tr>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter17" class="col" id="parameter17"
-                                           placeholder="Гламур">
-                                </div>
-                            </td>
-                            <td class="col">
-
-                                <div>
-                                    <input type="number" name="parameter18" class="col" id="parameter18"
-                                           placeholder="Kiss">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter19" class="col" id="parameter19"
-                                           placeholder="Esse">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter20" class="col" id="parameter20"
-                                           placeholder="Quin">
-                                </div>
-                            </td>
-                            <td class="col">
-                                <div>
-                                    <input type="number" name="parameter21" class="col" id="parameter21"
-                                           placeholder="Lady">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter22" class="col" id="parameter22"
-                                           placeholder="Mor">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter23" class="col" id="parameter23"
-                                           placeholder="Chester">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter24" class="col" id="parameter24"
-                                           placeholder="Radopy">
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <table class="table table-hover shoplist col-12 col-md-8">
-                        <thead>
-                        <tr>
-                            <th scope="col" class="col">Стюардесса</th>
-                            <th scope="col" class="col">Столичные</th>
-                            <th scope="col" class="col">Донской</th>
-                            <th scope="col" class="col">Тройка</th>
-                            <th scope="col" class="col">Fast</th>
-                            <th scope="col" class="col">Royal</th>
-                            <th scope="col" class="col">Manchester</th>
-                            <th scope="col" class="col">Pretigue</th>
-
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter25" class="col" id="parameter25"
-                                           placeholder="Стюардесса">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter26" class="col" id="parameter26"
-                                           placeholder="Stolichniye">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter27" class="col" id="parameter27"
-                                           placeholder="Donskoy">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter28" class="col" id="parameter28"
-                                           placeholder="Тройка">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter29" class="col" id="parameter29"
-                                           placeholder="Fast">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter30" class="col" id="parameter30"
-                                           placeholder="Royal">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter31" class="col" id="parameter31"
-                                           placeholder="Manchester">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter32" class="col" id="parameter32"
-                                           placeholder="Pretigue">
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <table class="table table-hover shoplist col-12 col-md-8">
-                        <thead>
-                        <tr>
-                            <th scope="col" class="col">Premier</th>
-                            <th scope="col" class="col">Cosmos</th>
-                            <th scope="col" class="col">Next</th>
-                            <th scope="col" class="col">Magnat</th>
-                            <th scope="col" class="col">Минск</th>
-                            <th scope="col" class="col">Союз</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter33" class="col" id="parameter33"
-                                           placeholder="Premier">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter34" class="col" id="parameter34"
-                                           placeholder="Cosmos">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter35" class="col" id="parameter35"
-                                           placeholder="Next">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter36" class="col" id="parameter36"
-                                           placeholder="Magnat">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter37" class="col" id="parameter37"
-                                           placeholder="Minsk">
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <input type="number" name="parameter38" class="col" id="parameter38"
-                                           placeholder="Союз">
-                                </div>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <button>Добавить</button>
-                </div>
-            </form>
         </div>
     </div>
 </div>

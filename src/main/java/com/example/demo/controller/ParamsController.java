@@ -17,12 +17,17 @@ public class ParamsController {
 
 
     @GetMapping("/params")
-    public String params() {
+    public String params(Model model){
+        var params = service.findParamsById(1);
+        model.addAttribute("params",params);
         return "params";
     }
 
-
-    @PostMapping("/params")
+    @GetMapping("/paramsEach")
+    public String paramsEach(Model model){
+        return "paramsEach";
+    }
+    @PostMapping("/paramsEach")
     public String saveParams(@RequestParam int parameter1, @RequestParam int parameter2,
                              @RequestParam int parameter3, @RequestParam int parameter4, @RequestParam int parameter5,
                              @RequestParam int parameter6, @RequestParam int parameter7, @RequestParam int parameter8,

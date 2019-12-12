@@ -74,288 +74,104 @@
                 </div>
                 <button>Рассчитать</button>
             </form>
-            <div data-th-each="best:${best}">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">Айди группы</th>
-                    <th scope="col">Первый сотрудник</th>
-                    <th scope="col">Второй сотрудник</th>
-                    <th scope="col">Оклад*Процент</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr data-th-each="bests:${best}">
-                    <td>[[${best.getId()}]]</td>
-                    <td>[[${best.getFirstId()}]]</td>
-                    <td>[[${best.getSecondId()}]]</td>
-                    <td>[[${best.getProcentZp()}]]</td>
-                </tr>
-                </tbody>
-            </table>
-            <h3>Прибыль по сигаретам</h3>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">Bond</th>
-                    <th scope="col">Kent</th>
-                    <th scope="col">Parlametn</th>
-                    <th scope="col">Winston</th>
-                    <th scope="col">LM</th>
-                    <th scope="col">Malboro</th>
-                    <th scope="col">Rothmans</th>
-                    <th scope="col">LD</th>
-                    <th scope="col">Philip Morris</th>
-                    <th scope="col">Aliance</th>
-                    <th scope="col">Java</th>
-                    <th scope="col">Optima</th>
-                    <th scope="col">Пётр</th>
-                    <th scope="col">Максим</th>
-                    <th scope="col">Кресты</th>
-                    <th scope="col">Vog</th>
-                    <th scope="col">Гламур</th>
-                    <th scope="col">Kiss</th>
-                    <th scope="col">Esse</th>
-                    <th scope="col">Quin</th>
-                    <th scope="col">Lady</th>
-                    <th scope="col">Мор</th>
-                    <th scope="col">Chester</th>
-                    <th scope="col">Радопи</th>
-                    <th scope="col">Стюардесса</th>
-                    <th scope="col">Столичные</th>
-                    <th scope="col">Донской</th>
-                    <th scope="col">Тройка</th>
-                    <th scope="col">Fast</th>
-                    <th scope="col">Royal</th>
-                    <th scope="col">Manchester</th>
-                    <th scope="col">Pretigue</th>
-                    <th scope="col">Premier</th>
-                    <th scope="col">Cosmos</th>
-                    <th scope="col">Next</th>
-                    <th scope="col">Magnat</th>
-                    <th scope="col">Минск</th>
-                    <th scope="col">Союз</th>
+            <form data-th-action="@{/bestsGroup}" method="post"></form>
+            <a data-th-href="@{/bestGroup2}">Рассчитать группу из 2</a>
+            <a data-th-href="@{/bestGroup3}">Рассчитать группу из 3</a>
+            <a data-th-href="@{/bestGroup4}">Рассчитать группу из 4</a>
+            <a data-th-href="@{/bestGroup5}">Рассчитать группу из 5</a>
+            <a data-th-href="@{/bestGroup6}">Рассчитать группу из 6</a>
+            <a data-th-href="@{/bestGroup7}">Рассчитать группу из 7</a>
+            <a data-th-href="@{/bestGroup8}">Рассчитать группу из 8</a>
+            <div class="table-responsive">
 
-                </tr>
-                </thead>
-                <tbody>
-                <tr >
-                    <td>[[${best.getSumBond()}]]</td>
-                    <td>[[${best.getSumKent()}]]</td>
-                    <td>[[${best.getSumParlament()}]]</td>
-                    <td>[[${best.getSumWinston()}]]</td>
-                    <td>[[${best.getSumLm()}]]</td>
-                    <td>[[${best.getSumMalboro()}]]</td>
-                    <td>[[${best.getSumRotmans()}]]</td>
-                    <td>[[${best.getSumLd()}]]</td>
-                    <td>[[${best.getSumFmorris()}]]</td>
-                    <td>[[${best.getSumAliance()}]]</td>
-                    <td>[[${best.getSumJava()}]]</td>
-                    <td>[[${best.getSumOptima()}]]</td>
-                    <td>[[${best.getSumPetr()}]]</td>
-                    <td>[[${best.getSumMaksim()}]]</td>
-                    <td>[[${best.getSumCrests()}]]</td>
-                    <td>[[${best.getSumVog()}]]</td>
-                    <td>[[${best.getSumGlamur()}]]</td>
-                    <td>[[${best.getSumKiss()}]]</td>
-                    <td>[[${best.getSumEsse()}]]</td>
-                    <td>[[${best.getSumQuin()}]]</td>
-                    <td>[[${best.getSumLady()}]]</td>
-                    <td>[[${best.getSumMor()}]]</td>
-                    <td>[[${best.getSumChester()}]]</td>
-                    <td>[[${best.getSumRadopy()}]]</td>
-                    <td>[[${best.getSumStuardessa()}]]</td>
-                    <td>[[${best.getSumStolichniye()}]]</td>
-                    <td>[[${best.getSumDonskoy()}]]</td>
-                    <td>[[${best.getSumTroyka()}]]</td>
-                    <td>[[${best.getSumFast()}]]</td>
-                    <td>[[${best.getSumRoyal()}]]</td>
-                    <td>[[${best.getSumManchester()}]]</td>
-                    <td>[[${best.getSumPrestigue()}]]</td>
-                    <td>[[${best.getSumPremier()}]]</td>
-                    <td>[[${best.getSumCosmos()}]]</td>
-                    <td>[[${best.getSumNext()}]]</td>
-                    <td>[[${best.getSumMagnat()}]]</td>
-                    <td>[[${best.getSumMinsk()}]]</td>
-                    <td>[[${best.getSumSouz()}]]</td>
-                </tr>
-                </tbody>
-            </table>
-            <h3>Прибыль с учётом затрат</h3>
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">Bond</th>
-                    <th scope="col">Kent</th>
-                    <th scope="col">Parlametn</th>
-                    <th scope="col">Winston</th>
-                    <th scope="col">LM</th>
-                    <th scope="col">Malboro</th>
-                    <th scope="col">Rothmans</th>
-                    <th scope="col">LD</th>
-                    <th scope="col">Philip Morris</th>
-                    <th scope="col">Aliance</th>
-                    <th scope="col">Java</th>
-                    <th scope="col">Optima</th>
-                    <th scope="col">Пётр</th>
-                    <th scope="col">Максим</th>
-                    <th scope="col">Кресты</th>
-                    <th scope="col">Vog</th>
-                    <th scope="col">Гламур</th>
-                    <th scope="col">Kiss</th>
-                    <th scope="col">Esse</th>
-                    <th scope="col">Quin</th>
-                    <th scope="col">Lady</th>
-                    <th scope="col">Мор</th>
-                    <th scope="col">Chester</th>
-                    <th scope="col">Радопи</th>
-                    <th scope="col">Стюардесса</th>
-                    <th scope="col">Столичные</th>
-                    <th scope="col">Донской</th>
-                    <th scope="col">Тройка</th>
-                    <th scope="col">Fast</th>
-                    <th scope="col">Royal</th>
-                    <th scope="col">Manchester</th>
-                    <th scope="col">Pretigue</th>
-                    <th scope="col">Premier</th>
-                    <th scope="col">Cosmos</th>
-                    <th scope="col">Next</th>
-                    <th scope="col">Magnat</th>
-                    <th scope="col">Минск</th>
-                    <th scope="col">Союз</th>
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>[[${best.getResultBond()}]]</td>
-                    <td>[[${best.getResultKent()}]]</td>
-                    <td>[[${best.getResultParlament()}]]</td>
-                    <td>[[${best.getResultWinston()}]]</td>
-                    <td>[[${best.getResultLm()}]]</td>
-                    <td>[[${best.getResultMalboro()}]]</td>
-                    <td>[[${best.getResultRotmans()}]]</td>
-                    <td>[[${best.getResultLd()}]]</td>
-                    <td>[[${best.getResultFmorris()}]]</td>
-                    <td>[[${best.getResultAliance()}]]</td>
-                    <td>[[${best.getResultJava()}]]</td>
-                    <td>[[${best.getResultOptima()}]]</td>
-                    <td>[[${best.getResultPetr()}]]</td>
-                    <td>[[${best.getResultMaksim()}]]</td>
-                    <td>[[${best.getResultCrests()}]]</td>
-                    <td>[[${best.getResultVog()}]]</td>
-                    <td>[[${best.getResultGlamur()}]]</td>
-                    <td>[[${best.getResultKiss()}]]</td>
-                    <td>[[${best.getResultEsse()}]]</td>
-                    <td>[[${best.getResultQuin()}]]</td>
-                    <td>[[${best.getResultLady()}]]</td>
-                    <td>[[${best.getResultMor()}]]</td>
-                    <td>[[${best.getResultChester()}]]</td>
-                    <td>[[${best.getResultRadopy()}]]</td>
-                    <td>[[${best.getResultStuardessa()}]]</td>
-                    <td>[[${best.getResultStolichniye()}]]</td>
-                    <td>[[${best.getResultDonskoy()}]]</td>
-                    <td>[[${best.getResultTroyka()}]]</td>
-                    <td>[[${best.getResultFast()}]]</td>
-                    <td>[[${best.getResultRoyal()}]]</td>
-                    <td>[[${best.getResultManchester()}]]</td>
-                    <td>[[${best.getResultPrestigue()}]]</td>
-                    <td>[[${best.getResultPremier()}]]</td>
-                    <td>[[${best.getResultCosmos()}]]</td>
-                    <td>[[${best.getResultNext()}]]</td>
-                    <td>[[${best.getResultMagnat()}]]</td>
-                    <td>[[${best.getResultMinsk()}]]</td>
-                    <td>[[${best.getResultSouz()}]]</td>
-                </tr>
-                </tbody>
-            </table>
-                <h3>Коэф прибыли</h3>
-                <table class="table">
+                <table class="table table-hover table-bordered table-sm shoplist col-12-md-8">
                     <thead>
                     <tr>
-                        <th scope="col">Bond</th>
-                        <th scope="col">Kent</th>
-                        <th scope="col">Parlametn</th>
-                        <th scope="col">Winston</th>
-                        <th scope="col">LM</th>
-                        <th scope="col">Malboro</th>
-                        <th scope="col">Rothmans</th>
-                        <th scope="col">LD</th>
-                        <th scope="col">Philip Morris</th>
-                        <th scope="col">Aliance</th>
-                        <th scope="col">Java</th>
-                        <th scope="col">Optima</th>
-                        <th scope="col">Пётр</th>
-                        <th scope="col">Максим</th>
-                        <th scope="col">Кресты</th>
-                        <th scope="col">Vog</th>
-                        <th scope="col">Гламур</th>
-                        <th scope="col">Kiss</th>
-                        <th scope="col">Esse</th>
-                        <th scope="col">Quin</th>
-                        <th scope="col">Lady</th>
-                        <th scope="col">Мор</th>
-                        <th scope="col">Chester</th>
-                        <th scope="col">Радопи</th>
-                        <th scope="col">Стюардесса</th>
-                        <th scope="col">Столичные</th>
-                        <th scope="col">Донской</th>
-                        <th scope="col">Тройка</th>
-                        <th scope="col">Fast</th>
-                        <th scope="col">Royal</th>
-                        <th scope="col">Manchester</th>
-                        <th scope="col">Pretigue</th>
-                        <th scope="col">Premier</th>
-                        <th scope="col">Cosmos</th>
-                        <th scope="col">Next</th>
-                        <th scope="col">Magnat</th>
-                        <th scope="col">Минск</th>
-                        <th scope="col">Союз</th>
+                        <th scope="row">
+                            <h6>Группа из 2</h6>
+                            <table class="table table-hover table-bordered table-sm shoplist col-12-md-8"
+                            data-th-each="g2:${bgroup2}">
+                                <thead>
+                                <tr>
+                                    <th scope="row">Айди группы</th>
+                                    <th scope="row">Айди сотрудников</th>
+                                    <th scope="row">Рентабельность</th>
+                                    <th scope="row">100%</th>
+                                    <th scope="row">10 тыс.</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <a data-th-href="@{/bGroups2/{id}(id=${g2.getId()})}">
+                                            [[${g2.getId()}]]
+                                        </a>
+                                    </td>
+                                    <td>[[${g2.getFirstId()}]]</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>[[${g2.getSecondId()}]]</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </th>
+                        <th scope="row">
+                            <h6>Группа из 3</h6>
+                            <table class="table table-hover table-bordered table-sm shoplist col-12-md-8"
+                            data-th-each="g3:${bgroup3}">
+                                <thead>
+                                    <tr>
+                                        <th scope="row">Айди группы</th>
+                                        <th scope="row">Айди сотрудников</th>
+                                        <th scope="row">Рентабельность</th>
+                                        <th scope="row">100%</th>
+                                        <th scope="row">10 тыс.</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a data-th-href="@{/bGroups3/{id}(id=${g3.getId()})}">
+                                                [[${g3.getId()}]]
+                                            </a>
+                                        </td>
+                                        <td>[[${g3.getFirstId()}]]</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>[[${g3.getSecondId()}]]</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>[[${g3.getThirdId()}]]</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>[[${best.getCoefBond()}]]</td>
-                        <td>[[${best.getCoefKent()}]]</td>
-                        <td>[[${best.getCoefParlament()}]]</td>
-                        <td>[[${best.getCoefWinston()}]]</td>
-                        <td>[[${best.getCoefLm()}]]</td>
-                        <td>[[${best.getCoefMalboro()}]]</td>
-                        <td>[[${best.getCoefRotmans()}]]</td>
-                        <td>[[${best.getCoefLd()}]]</td>
-                        <td>[[${best.getCoefFmorris()}]]</td>
-                        <td>[[${best.getCoefAliance()}]]</td>
-                        <td>[[${best.getCoefJava()}]]</td>
-                        <td>[[${best.getCoefOptima()}]]</td>
-                        <td>[[${best.getCoefPetr()}]]</td>
-                        <td>[[${best.getCoefMaksim()}]]</td>
-                        <td>[[${best.getCoefCrests()}]]</td>
-                        <td>[[${best.getCoefVog()}]]</td>
-                        <td>[[${best.getCoefGlamur()}]]</td>
-                        <td>[[${best.getCoefKiss()}]]</td>
-                        <td>[[${best.getCoefEsse()}]]</td>
-                        <td>[[${best.getCoefQuin()}]]</td>
-                        <td>[[${best.getCoefLady()}]]</td>
-                        <td>[[${best.getCoefMor()}]]</td>
-                        <td>[[${best.getCoefChester()}]]</td>
-                        <td>[[${best.getCoefRadopy()}]]</td>
-                        <td>[[${best.getCoefStuardessa()}]]</td>
-                        <td>[[${best.getCoefStolichniye()}]]</td>
-                        <td>[[${best.getCoefDonskoy()}]]</td>
-                        <td>[[${best.getCoefTroyka()}]]</td>
-                        <td>[[${best.getCoefFast()}]]</td>
-                        <td>[[${best.getCoefRoyal()}]]</td>
-                        <td>[[${best.getCoefManchester()}]]</td>
-                        <td>[[${best.getCoefPrestigue()}]]</td>
-                        <td>[[${best.getCoefPremier()}]]</td>
-                        <td>[[${best.getCoefCosmos()}]]</td>
-                        <td>[[${best.getCoefNext()}]]</td>
-                        <td>[[${best.getCoefMagnat()}]]</td>
-                        <td>[[${best.getCoefMinsk()}]]</td>
-                        <td>[[${best.getCoefSouz()}]]</td>
-                    </tr>
-                    </tbody>
                 </table>
             </div>
         </div>

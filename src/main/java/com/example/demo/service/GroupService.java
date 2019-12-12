@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.domain.*;
+import com.example.demo.domain.bestGroup.*;
 import com.example.demo.repo.GroupRepo;
 import org.springframework.stereotype.Service;
 
@@ -36,6 +37,28 @@ public class GroupService {
 
     public void addGroup2(GroupTwo groupTwo) {
         groupRepo.addGroup2(groupTwo);
+    }
+
+    public ResultSigarets2 getBestGroup2ById(int id){
+        return groupRepo.getBestGroup2ById(id);
+    }
+    public ResultSigarets3 getBestGroup3ById(int id){
+        return groupRepo.getBestGroup3ById(id);
+    }
+    public ResultSigarets4 getBestGroup4ById(int id){
+        return groupRepo.getBestGroup4ById(id);
+    }
+    public ResultSigarets5 getBestGroup5ById(int id){
+        return groupRepo.getBestGroup5ById(id);
+    }
+    public ResultSigarets6 getBestGroup6ById(int id){
+        return groupRepo.getBestGroup6ById(id);
+    }
+    public ResultSigarets7 getBestGroup7ById(int id){
+        return groupRepo.getBestGroup7ById(id);
+    }
+    public ResultSigarets8 getBestGroup8ById(int id){
+        return groupRepo.getBestGroup8ById(id);
     }
 
 
