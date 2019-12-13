@@ -70,7 +70,8 @@
     <thead>
     <tr>
 
-        <th scope="col">id</th>
+        <th scope="col">Id</th>
+        <th scope="col">Id Сотр.</th>
         <th scope="col">Лучшая рент.</th>
         <th scope="col">Январь</th>
         <th scope="col">Февраль</th>
@@ -89,6 +90,7 @@
     </thead>
     <tbody>
     <tr data-th-each="worker:${workers}">
+        <td>[[${worker.getId()}]]</td>
         <th scope="row">
             <div data-toggle="tooltip" title="${worker.getName()}">
                 <a data-th-href="@{/worker/{id}(id=${worker.getId()})}">[[${worker.getWorkerId()}]]</a>

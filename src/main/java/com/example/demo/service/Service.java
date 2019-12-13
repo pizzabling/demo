@@ -1,8 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.*;
+import com.example.demo.domain.Worker;
 import com.example.demo.repo.Repo;
-
 
 import java.sql.SQLException;
 import java.util.List;
@@ -23,6 +22,10 @@ public class Service {
 
     public Worker findWorkerById(int id) {
         return repo.findWorkerById(id);
+    }
+
+    public Worker findWorkerByWorkerId(int workerId){
+        return repo.findWorkerByWorkerId(workerId);
     }
 
     public Worker findWorkerByName(String name) {

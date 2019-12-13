@@ -16,6 +16,7 @@ public class ResultSigarets5 {
     private double okladThird;
     private double okladFourth;
     private double okladFifth;
+    private double expenses;
     private double sumBond;
     private double sumKent;
     private double sumParlament;
@@ -136,7 +137,7 @@ public class ResultSigarets5 {
     public ResultSigarets5() {
     }
 
-    public ResultSigarets5(int id, int firstId, int secondId, int thirdId, int fourthId, int fifthId, double okladFirst, double okladSecond, double okladThird, double okladFourth, double okladFifth, double sumBond, double sumKent, double sumParlament, double sumWinston, double sumLm, double sumMalboro, double sumRotmans, double sumLd, double sumFmorris, double sumAliance, double sumJava, double sumOptima, double sumPetr, double sumMaksim, double sumCrests, double sumVog, double sumGlamur, double sumKiss, double sumEsse, double sumQuin, double sumLady, double sumMor, double sumChester, double sumRadopy, double sumStuardessa, double sumStolichniye, double sumDonskoy, double sumTroyka, double sumFast, double sumRoyal, double sumManchester, double sumPrestigue, double sumPremier, double sumCosmos, double sumNext, double sumMagnat, double sumMinsk, double sumSouz, double resultBond, double resultKent, double resultParlament, double resultWinston, double resultLm, double resultMalboro, double resultRotmans, double resultLd, double resultFmorris, double resultAliance, double resultJava, double resultOptima, double resultPetr, double resultMaksim, double resultCrests, double resultVog, double resultGlamur, double resultKiss, double resultEsse, double resultQuin, double resultLady, double resultMor, double resultChester, double resultRadopy, double resultStuardessa, double resultStolichniye, double resultDonskoy, double resultTroyka, double resultFast, double resultRoyal, double resultManchester, double resultPrestigue, double resultPremier, double resultCosmos, double resultNext, double resultMagnat, double resultMinsk, double resultSouz, double coefBond, double coefKent, double coefParlament, double coefWinston, double coefLm, double coefMalboro, double coefRotmans, double coefLd, double coefFmorris, double coefAliance, double coefJava, double coefOptima, double coefPetr, double coefMaksim, double coefCrests, double coefVog, double coefGlamur, double coefKiss, double coefEsse, double coefQuin, double coefLady, double coefMor, double coefChester, double coefRadopy, double coefStuardessa, double coefStolichniye, double coefDonskoy, double coefTroyka, double coefFast, double coefRoyal, double coefManchester, double coefPrestigue, double coefPremier, double coefCosmos, double coefNext, double coefMagnat, double coefMinsk, double coefSouz) {
+    public ResultSigarets5(int id, int firstId, int secondId, int thirdId, int fourthId, int fifthId, double okladFirst, double okladSecond, double okladThird, double okladFourth, double okladFifth, double expenses, double sumBond, double sumKent, double sumParlament, double sumWinston, double sumLm, double sumMalboro, double sumRotmans, double sumLd, double sumFmorris, double sumAliance, double sumJava, double sumOptima, double sumPetr, double sumMaksim, double sumCrests, double sumVog, double sumGlamur, double sumKiss, double sumEsse, double sumQuin, double sumLady, double sumMor, double sumChester, double sumRadopy, double sumStuardessa, double sumStolichniye, double sumDonskoy, double sumTroyka, double sumFast, double sumRoyal, double sumManchester, double sumPrestigue, double sumPremier, double sumCosmos, double sumNext, double sumMagnat, double sumMinsk, double sumSouz, double resultBond, double resultKent, double resultParlament, double resultWinston, double resultLm, double resultMalboro, double resultRotmans, double resultLd, double resultFmorris, double resultAliance, double resultJava, double resultOptima, double resultPetr, double resultMaksim, double resultCrests, double resultVog, double resultGlamur, double resultKiss, double resultEsse, double resultQuin, double resultLady, double resultMor, double resultChester, double resultRadopy, double resultStuardessa, double resultStolichniye, double resultDonskoy, double resultTroyka, double resultFast, double resultRoyal, double resultManchester, double resultPrestigue, double resultPremier, double resultCosmos, double resultNext, double resultMagnat, double resultMinsk, double resultSouz, double coefBond, double coefKent, double coefParlament, double coefWinston, double coefLm, double coefMalboro, double coefRotmans, double coefLd, double coefFmorris, double coefAliance, double coefJava, double coefOptima, double coefPetr, double coefMaksim, double coefCrests, double coefVog, double coefGlamur, double coefKiss, double coefEsse, double coefQuin, double coefLady, double coefMor, double coefChester, double coefRadopy, double coefStuardessa, double coefStolichniye, double coefDonskoy, double coefTroyka, double coefFast, double coefRoyal, double coefManchester, double coefPrestigue, double coefPremier, double coefCosmos, double coefNext, double coefMagnat, double coefMinsk, double coefSouz) {
         this.id = id;
         this.firstId = firstId;
         this.secondId = secondId;
@@ -148,6 +149,7 @@ public class ResultSigarets5 {
         this.okladThird = okladThird;
         this.okladFourth = okladFourth;
         this.okladFifth = okladFifth;
+        this.expenses = expenses;
         this.sumBond = sumBond;
         this.sumKent = sumKent;
         this.sumParlament = sumParlament;
@@ -350,6 +352,14 @@ public class ResultSigarets5 {
 
     public void setOkladFifth(double okladFifth) {
         this.okladFifth = okladFifth;
+    }
+
+    public double getExpenses() {
+        return expenses;
+    }
+
+    public void setExpenses(double expenses) {
+        this.expenses = expenses;
     }
 
     public double getSumBond() {

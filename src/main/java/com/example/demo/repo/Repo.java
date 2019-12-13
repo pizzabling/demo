@@ -24,6 +24,7 @@ public class Repo {
     private static final String GET_WORKER_PARAMETERS = "SELECT ID,WORKERID, RENT, JANRENT, FEBRENT, MARRENT, APRRENT, MAYRENT, JUNERENT, JULYRENT, AUGRENT, SEPRENT, OCTRENT, NOVRENT, DECRENT,NAME, RATIO,COMMENT from workers";
     private static final String FIND_WORKER_BY_ID = "select ID, WORKERID, RENT, JANRENT, FEBRENT, MARRENT, APRRENT, MAYRENT, JUNERENT, JULYRENT, AUGRENT, SEPRENT, OCTRENT, NOVRENT, DECRENT, NAME, RATIO, comment from WORKERS where id=?";
     private static final String FIND_WORKER_BY_NAME = "select * from WORKERS where name=?";
+    private static final String FIND_WORKER_BY_WORKERID = "select * from WORKERS where WORKERID=?";
     private static final String SAVE_WORKER = "insert into WORKERS (workerId,rent,janRent,febRent,marRent,aprRent,mayRent,juneRent,julyRent,augRent,sepRent,octRent,novRent,decRent,NAME,RATIO,COMMENT) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
     private static final String SAVE_PARSE_WORKER = "insert into WORKERS(workerId,rent,RATIO) values (?,?,?)";
     private static final String UPDATE_WORKER = "UPDATE WORKERS set NAME=?, WORKERID=?,RENT=?,RATIO=?, COMMENT=? where id=?";
@@ -127,6 +128,32 @@ public class Repo {
         return jdbcTemplate.queryForObject(FIND_WORKER_BY_ID,
                 new Object[]{id},
                 (rs, i) -> new Worker(
+                        rs.getInt("id"),
+                        rs.getInt("workerId"),
+                        rs.getDouble("rent"),
+                        rs.getDouble("janRent"),
+                        rs.getDouble("febRent"),
+                        rs.getDouble("marRent"),
+                        rs.getDouble("aprRent"),
+                        rs.getDouble("mayRent"),
+                        rs.getDouble("juneRent"),
+                        rs.getDouble("julyRent"),
+                        rs.getDouble("augRent"),
+                        rs.getDouble("sepRent"),
+                        rs.getDouble("octRent"),
+                        rs.getDouble("novRent"),
+                        rs.getDouble("decRent"),
+                        rs.getString("name"),
+                        rs.getDouble("ratio"),
+                        rs.getString("comment")
+                )
+        );
+    }
+
+    public Worker findWorkerByWorkerId(int workerId){
+        return jdbcTemplate.queryForObject(FIND_WORKER_BY_WORKERID,
+                new Object[] {workerId},
+                (rs,i)->new Worker(
                         rs.getInt("id"),
                         rs.getInt("workerId"),
                         rs.getDouble("rent"),

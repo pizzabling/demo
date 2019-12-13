@@ -3,9 +3,13 @@ package com.example.demo.controller;
 import com.example.demo.domain.*;
 import com.example.demo.service.BestGroupService;
 import com.example.demo.service.GroupService;
+import com.example.demo.service.Service;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
 
@@ -14,11 +18,13 @@ public class GroupController {
 
     private final GroupService groupService;
     private final BestGroupService bestGroupService;
+    private final Service service;
 
-    public GroupController(GroupService groupService, BestGroupService bestGroupService) {
+    public GroupController(GroupService groupService, BestGroupService bestGroupService, Service service) {
 
         this.groupService = groupService;
         this.bestGroupService = bestGroupService;
+        this.service = service;
     }
 
     @GetMapping("/bestsGroup")
@@ -33,11 +39,6 @@ public class GroupController {
         return "bestsGroup";
     }
 
-    @PostMapping("/bestsGroup")
-    public String testAllGroup(@RequestParam int num, Model model) {
-        bestGroupService.setNum(num);
-        return "bestsGroup";
-    }
 
     @GetMapping("/bestGroup2")
     public String calcBestGroup2(Model model) {

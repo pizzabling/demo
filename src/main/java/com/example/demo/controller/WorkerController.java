@@ -75,6 +75,16 @@ public class WorkerController {
         model.addAttribute("sigarets",sigarets);
         return "worker";
     }
+    @GetMapping("/worker/workerId{workerId}")
+    public String workerPageByWorkerId(@PathVariable int workerId, Model model){
+        var worker = service.findWorkerByWorkerId(workerId);
+        int id = worker.getId();
+        var sigarets = sigaretsService.getSigaretsById(id);
+        model.addAttribute("title", worker.getName());
+        model.addAttribute("worker", worker);
+        model.addAttribute("sigarets",sigarets);
+        return "worker";
+    }
 
     @GetMapping("/edit/{id}")
     public String editPage(@PathVariable int id, Model model) {

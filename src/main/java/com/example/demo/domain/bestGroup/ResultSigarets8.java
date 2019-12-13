@@ -21,6 +21,7 @@ public class ResultSigarets8 {
     private double okladSixth;
     private double okladSeventh;
     private double okladEighth;
+    private double expenses;
     private double sumBond;
     private double sumKent;
     private double sumParlament;
@@ -159,6 +160,7 @@ public class ResultSigarets8 {
         this.okladSixth = okladSixth;
         this.okladSeventh = okladSeventh;
         this.okladEighth = okladEighth;
+
         this.sumBond = sumBond;
         this.sumKent = sumKent;
         this.sumParlament = sumParlament;
@@ -409,6 +411,14 @@ public class ResultSigarets8 {
 
     public void setOkladEighth(double okladEighth) {
         this.okladEighth = okladEighth;
+    }
+
+    public double getExpenses() {
+        return expenses;
+    }
+
+    public void setExpenses(double expenses) {
+        this.expenses = expenses;
     }
 
     public double getSumBond() {

@@ -24,14 +24,14 @@ public class BestGroupService {
         this.repo = repo;
     }
 
-    private static final String SAVE_BEST_GROUP2 = "INSERT INTO SIGARETSRESULT2(firstId, secondId,OKLADFIRST,OKLADSECOND, sumBond, sumKent, sumParlament, sumWinston, sumLm, sumMalboro, sumRotmans, sumLd, sumFmorris, sumAliance, sumJava, sumOptima, sumPetr, sumMaksim, sumCrests, sumVog, sumGlamur, sumKiss, sumEsse, sumQuin, sumLady, sumMor, sumChester, sumRadopy, sumStuardessa, sumStolichniye, sumDonskoy, sumTroyka, sumFast, sumRoyal, sumManchester, sumPrestigue, sumPremier, sumCosmos, sumNext, sumMagnat, sumMinsk, sumSouz,\n" +
+    private static final String SAVE_BEST_GROUP2 = "INSERT INTO SIGARETSRESULT2(firstId, secondId,OKLADFIRST,OKLADSECOND, expenses, sumBond, sumKent, sumParlament, sumWinston, sumLm, sumMalboro, sumRotmans, sumLd, sumFmorris, sumAliance, sumJava, sumOptima, sumPetr, sumMaksim, sumCrests, sumVog, sumGlamur, sumKiss, sumEsse, sumQuin, sumLady, sumMor, sumChester, sumRadopy, sumStuardessa, sumStolichniye, sumDonskoy, sumTroyka, sumFast, sumRoyal, sumManchester, sumPrestigue, sumPremier, sumCosmos, sumNext, sumMagnat, sumMinsk, sumSouz,\n" +
             "resultBond, resultKent, resultParlament, resultWinston, resultLm, resultMalboro, resultRotmans, resultLd, resultFmorris, resultAliance, resultJava, resultOptima, resultPetr, resultMaksim, resultCrests, resultVog, resultGlamur, resultKiss, resultEsse, resultQuin, resultLady, resultMor, resultChester, resultRadopy, resultStuardessa, resultStolichniye, resultDonskoy, resultTroyka, resultFast, resultRoyal,  resultManchester,resultPrestigue, resultPremier, resultCosmos, resultNext, resultMagnat, " +
             "resultMinsk, resultSouz, coefBond, coefKent, coefParlament, coefWinston, coefLm, coefMalboro, coefRotmans, coefLd, coefFmorris, coefAliance, coefJava, coefOptima, coefPetr, coefMaksim, coefCrests, coefVog, coefGlamur, coefKiss, coefEsse, coefQuin, coefLady, coefMor, coefChester, coefRadopy, coefStuardessa, coefStolichniye, coefDonskoy, coefTroyka, coefFast, coefRoyal, coefManchester, coefPrestigue, coefPremier, coefCosmos, coefNext, coefMagnat, coefMinsk, coefSouz)" +
-            "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? )";
+            "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? )";
     private static final String SAVE_BEST_GROUP3 = "INSERT INTO SIGARETSRESULT3 (firstId, secondId,thirdid,OKLADFIRST,OKLADSECOND,okladThird, sumBond, sumKent, sumParlament, sumWinston, sumLm, sumMalboro, sumRotmans, sumLd, sumFmorris, sumAliance, sumJava, sumOptima, sumPetr, sumMaksim, sumCrests, sumVog, sumGlamur, sumKiss, sumEsse, sumQuin, sumLady, sumMor, sumChester, sumRadopy, sumStuardessa, sumStolichniye, sumDonskoy, sumTroyka, sumFast, sumRoyal, sumManchester, sumPrestigue, sumPremier, sumCosmos, sumNext, sumMagnat, sumMinsk, sumSouz,\n" +
             "resultBond, resultKent, resultParlament, resultWinston, resultLm, resultMalboro, resultRotmans, resultLd, resultFmorris, resultAliance, resultJava, resultOptima, resultPetr, resultMaksim, resultCrests, resultVog, resultGlamur, resultKiss, resultEsse, resultQuin, resultLady, resultMor, resultChester, resultRadopy, resultStuardessa, resultStolichniye, resultDonskoy, resultTroyka, resultFast, resultRoyal,  resultManchester,resultPrestigue, resultPremier, resultCosmos, resultNext, resultMagnat, " +
             "resultMinsk, resultSouz, coefBond, coefKent, coefParlament, coefWinston, coefLm, coefMalboro, coefRotmans, coefLd, coefFmorris, coefAliance, coefJava, coefOptima, coefPetr, coefMaksim, coefCrests, coefVog, coefGlamur, coefKiss, coefEsse, coefQuin, coefLady, coefMor, coefChester, coefRadopy, coefStuardessa, coefStolichniye, coefDonskoy, coefTroyka, coefFast, coefRoyal, coefManchester, coefPrestigue, coefPremier, coefCosmos, coefNext, coefMagnat, coefMinsk, coefSouz)" +
-            "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? )";
+            "values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? )";
     private static final String SAVE_BEST_GROUP4 = "INSERT INTO SIGARETSRESULT4 (firstId, secondId,thirdid,fourthId,OKLADFIRST,OKLADSECOND,okladThird, okladFourth, sumBond, sumKent, sumParlament, sumWinston, sumLm, sumMalboro, sumRotmans, sumLd, sumFmorris, sumAliance, sumJava, sumOptima, sumPetr, sumMaksim, sumCrests, sumVog, sumGlamur, sumKiss, sumEsse, sumQuin, sumLady, sumMor, sumChester, sumRadopy, sumStuardessa, sumStolichniye, sumDonskoy, sumTroyka, sumFast, sumRoyal, sumManchester, sumPrestigue, sumPremier, sumCosmos, sumNext, sumMagnat, sumMinsk, sumSouz,\n" +
             "resultBond, resultKent, resultParlament, resultWinston, resultLm, resultMalboro, resultRotmans, resultLd, resultFmorris, resultAliance, resultJava, resultOptima, resultPetr, resultMaksim, resultCrests, resultVog, resultGlamur, resultKiss, resultEsse, resultQuin, resultLady, resultMor, resultChester, resultRadopy, resultStuardessa, resultStolichniye, resultDonskoy, resultTroyka, resultFast, resultRoyal,  resultManchester,resultPrestigue, resultPremier, resultCosmos, resultNext, resultMagnat, " +
             "resultMinsk, resultSouz, coefBond, coefKent, coefParlament, coefWinston, coefLm, coefMalboro, coefRotmans, coefLd, coefFmorris, coefAliance, coefJava, coefOptima, coefPetr, coefMaksim, coefCrests, coefVog, coefGlamur, coefKiss, coefEsse, coefQuin, coefLady, coefMor, coefChester, coefRadopy, coefStuardessa, coefStolichniye, coefDonskoy, coefTroyka, coefFast, coefRoyal, coefManchester, coefPrestigue, coefPremier, coefCosmos, coefNext, coefMagnat, coefMinsk, coefSouz)" +
@@ -56,27 +56,33 @@ public class BestGroupService {
 
     public void getTiming() {
         Date date = new Date();
-        System.out.println("Рассчёт окончен в: "+date.toString());
+        System.out.println("Рассчёт окончен в: " + date.toString());
     }
 
     public List<ResultSigarets2> getBestGroup2() {
         return repo.getBestGroups2();
     }
+
     public List<ResultSigarets3> getBestGroup3() {
         return repo.getBestGroup3();
     }
+
     public List<ResultSigarets4> getBestGroup4() {
         return repo.getBestGroup4();
     }
+
     public List<ResultSigarets5> getBestGroup5() {
         return repo.getBestGroup5();
     }
+
     public List<ResultSigarets6> getBestGroup6() {
         return repo.getBestGroup6();
     }
+
     public List<ResultSigarets7> getBestGroup7() {
         return repo.getBestGroup7();
     }
+
     public List<ResultSigarets8> getBestGroup8() {
         return repo.getBestGroup8();
     }
@@ -163,6 +169,9 @@ public class BestGroupService {
         double souz1;
         double souz2;
 
+        double salarySubs1;
+        double salarySubs2;
+
         double firstCoef;
         double secondCoef;
         double rentRatio1;
@@ -175,17 +184,22 @@ public class BestGroupService {
         int count2;
         int j = 2;
         //Первый сотрудник
-        for (count1 = i; count1 < 100; count1++) {
+        for (count1 = i; count1 < 466; count1++) {
             var worker1 = service.findWorkerById(count1);
             var sigarets1 = sigaretsService.getSigaretsById(count1);
+            rentRatio1 = worker1.getRatio() * worker1.getRent();
+//            System.out.println("Первый сотрудник " + count1);
             //Второй сотрудник
-            for (count2 = j; count2 < 100; count2++) {
+            for (count2 = j; count2 < 466; count2++) {
                 var worker2 = service.findWorkerById(count2);
                 var sigarets2 = sigaretsService.getSigaretsById(count2);
+                rentRatio2 = worker2.getRatio() * worker2.getRent();
+//                System.out.println("Второй сотрудник " + count2);
                 //Процент оклада первого
                 for (firstCoef = 1; firstCoef < 201; firstCoef++) {
-                    rentRatio1 = worker1.getRatio() * worker1.getRent();
-                    substitution1 = rentRatio1 * firstCoef / 100;
+                    salarySubs1 = worker1.getRatio() * firstCoef / 100; //Оклад для расчёта затрат первого
+                    substitution1 = rentRatio1 * firstCoef / 100;//Подстановка
+//                    System.out.println("Коэф первый " + firstCoef);
 
                     bond1 = sigarets1.getBond() * substitution1;
                     kent1 = sigarets1.getKent() * substitution1;
@@ -225,17 +239,20 @@ public class BestGroupService {
                     magnat1 = sigarets1.getMagnat() * substitution1;
                     minsk1 = sigarets1.getMinsk() * substitution1;
                     souz1 = sigarets1.getSouz() * substitution1;
-                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                            bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
-                            ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
-                            vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
-                            stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
-                            prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
+
+//                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                            bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
+//                            ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
+//                            vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
+//                            stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
+//                            prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1)
+//                    System.out.println("Сигареты первого занесены");
                     //Процент оклада второго
                     for (secondCoef = 1; secondCoef < 201; secondCoef++) {
-                        rentRatio2 = worker2.getRatio() * worker2.getRent();
-                        substitution2 = rentRatio2 * secondCoef / 100;
-                        expenses = substitution1 + substitution2;
+                        salarySubs2 = worker2.getRatio() * secondCoef / 100;//Оклад для расчёта затрат второго
+                        substitution2 = rentRatio2 * secondCoef / 100;//Подстановка
+                        expenses = salarySubs2 + salarySubs1;
+//                        System.out.println("Коэф второго " + secondCoef);
 
                         bond2 = sigarets2.getBond() * substitution2;
                         kent2 = sigarets2.getKent() * substitution2;
@@ -275,12 +292,14 @@ public class BestGroupService {
                         magnat2 = sigarets2.getMagnat() * substitution2;
                         minsk2 = sigarets2.getMinsk() * substitution2;
                         souz2 = sigarets2.getSouz() * substitution2;
-                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
-                                ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
-                                vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
-                                stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
-                                prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
+
+//                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
+//                                ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
+//                                vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
+//                                stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
+//                                prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
+//                        System.out.println("Сигареты второго занесены");
 
                         double sumBond = bond1 + bond2;
                         double sumKent = kent1 + kent2;
@@ -321,6 +340,8 @@ public class BestGroupService {
                         double sumMinsk = minsk1 + minsk2;
                         double sumSouz = souz1 + souz2;
 
+//                        System.out.println("Рассчитаны суммы");
+
                         double resultBond = sumBond - expenses;
                         double resultKent = sumKent - expenses;
                         double resultParlament = sumParlament - expenses;
@@ -360,46 +381,49 @@ public class BestGroupService {
                         double resultMinsk = sumMinsk - expenses;
                         double resultSouz = sumSouz - expenses;
 
-                        double expenses100 = expenses * 100;
+//                        System.out.println("Рассчитаны суммы-затраты");
 
-                        double coefBond = resultBond / expenses100;
-                        double coefKent = resultKent / expenses100;
-                        double coefParlament = resultParlament / expenses100;
-                        double coefWinston = resultWinston / expenses100;
-                        double coefLm = resultLm / expenses100;
-                        double coefMalboro = resultMalboro / expenses100;
-                        double coefRotmans = resultRotmans / expenses100;
-                        double coefLd = resultLd / expenses100;
-                        double coefFmorris = resultFmorris / expenses100;
-                        double coefAliance = resultAliance / expenses100;
-                        double coefJava = resultJava / expenses100;
-                        double coefOptima = resultOptima / expenses100;
-                        double coefPetr = resultPetr / expenses100;
-                        double coefMaksim = resultMaksim / expenses100;
-                        double coefCrests = resultCrests / expenses100;
-                        double coefVog = resultVog / expenses100;
-                        double coefGlamur = resultGlamur / expenses100;
-                        double coefKiss = resultKiss / expenses100;
-                        double coefEsse = resultEsse / expenses100;
-                        double coefQuin = resultQuin / expenses100;
-                        double coefLady = resultLady / expenses100;
-                        double coefMor = resultMor / expenses100;
-                        double coefChester = resultChester / expenses100;
-                        double coefRadopy = resultRadopy / expenses100;
-                        double coefStuardessa = resultStuardessa / expenses100;
-                        double coefStolichniye = resultStolichniye / expenses100;
-                        double coefDonskoy = resultDonskoy / expenses100;
-                        double coefTroyka = resultTroyka / expenses100;
-                        double coefFast = resultFast / expenses100;
-                        double coefRoyal = resultRoyal / expenses100;
-                        double coefManchester = resultManchester / expenses100;
-                        double coefPrestigue = resultPrestigue / expenses100;
-                        double coefPremier = resultPremier / expenses100;
-                        double coefCosmos = resultCosmos / expenses100;
-                        double coefNext = resultNext / expenses100;
-                        double coefMagnat = resultMagnat / expenses100;
-                        double coefMinsk = resultMinsk / expenses100;
-                        double coefSouz = resultSouz / expenses100;
+
+
+                        double coefBond = resultBond / expenses * 100;
+                        double coefKent = resultKent / expenses * 100;
+                        double coefParlament = resultParlament / expenses * 100;
+                        double coefWinston = resultWinston / expenses * 100;
+                        double coefLm = resultLm / expenses * 100;
+                        double coefMalboro = resultMalboro / expenses*100;
+                        double coefRotmans = resultRotmans / expenses*100;
+                        double coefLd = resultLd / expenses*100;
+                        double coefFmorris = resultFmorris / expenses*100;
+                        double coefAliance = resultAliance / expenses*100;
+                        double coefJava = resultJava / expenses*100;
+                        double coefOptima = resultOptima / expenses*100;
+                        double coefPetr = resultPetr / expenses*100;
+                        double coefMaksim = resultMaksim / expenses*100;
+                        double coefCrests = resultCrests / expenses*100;
+                        double coefVog = resultVog / expenses*100;
+                        double coefGlamur = resultGlamur / expenses*100;
+                        double coefKiss = resultKiss / expenses*100;
+                        double coefEsse = resultEsse / expenses*100;
+                        double coefQuin = resultQuin / expenses*100;
+                        double coefLady = resultLady / expenses*100;
+                        double coefMor = resultMor / expenses*100;
+                        double coefChester = resultChester / expenses*100;
+                        double coefRadopy = resultRadopy / expenses*100;
+                        double coefStuardessa = resultStuardessa / expenses*100;
+                        double coefStolichniye = resultStolichniye / expenses*100;
+                        double coefDonskoy = resultDonskoy / expenses*100;
+                        double coefTroyka = resultTroyka / expenses*100;
+                        double coefFast = resultFast / expenses*100;
+                        double coefRoyal = resultRoyal / expenses*100;
+                        double coefManchester = resultManchester / expenses*100;
+                        double coefPrestigue = resultPrestigue / expenses*100;
+                        double coefPremier = resultPremier / expenses*100;
+                        double coefCosmos = resultCosmos / expenses*100;
+                        double coefNext = resultNext / expenses*100;
+                        double coefMagnat = resultMagnat / expenses*100;
+                        double coefMinsk = resultMinsk / expenses*100;
+                        double coefSouz = resultSouz / expenses*100;
+//                        System.out.println("Рассчитаны коэфы по сигаретам");
 
                         if (coefBond >= parameters.getParameter1()) {
                             if (coefKent >= parameters.getParameter2()) {
@@ -439,11 +463,14 @@ public class BestGroupService {
                                                                                                                                                                     if (coefMagnat >= parameters.getParameter36()) {
                                                                                                                                                                         if (coefMinsk >= parameters.getParameter37()) {
                                                                                                                                                                             if (coefSouz >= parameters.getParameter38()) {
+                                                                                                                                                                                System.out.println("Группа найдена. Первый: " + count1 + " Второй: " + count2);
+                                                                                                                                                                                System.out.println("Коэф первого: "+firstCoef+" Коэф второго: "+secondCoef);
                                                                                                                                                                                 jdbcTemplate.update(SAVE_BEST_GROUP2,
                                                                                                                                                                                         worker1.getWorkerId(),
                                                                                                                                                                                         worker2.getWorkerId(),
                                                                                                                                                                                         firstCoef,
                                                                                                                                                                                         secondCoef,
+                                                                                                                                                                                        expenses,
                                                                                                                                                                                         sumBond,
                                                                                                                                                                                         sumKent,
                                                                                                                                                                                         sumParlament,
@@ -599,6 +626,8 @@ public class BestGroupService {
                                     }
                                 }
                             }
+//                        } else
+//                            System.out.println("Группа из сотрудников " + count1 + " " + count2 + "с коэфами" + firstCoef + "," + secondCoef + " Не рентабельна");
                         }
                     }
                 }
@@ -745,14 +774,14 @@ public class BestGroupService {
         int count3;
         int k = 3;
         //Первый сотрудник
-        for (count1 = i; count1 < 50; count1++) {
+        for (count1 = i; count1 < 466; count1++) {
             var worker1 = service.findWorkerById(count1);
             var sigarets1 = sigaretsService.getSigaretsById(count1);
             //Второй сотрудник
-            for (count2 = j; count2 < 50; count2++) {
+            for (count2 = j; count2 < 466; count2++) {
                 var worker2 = service.findWorkerById(count2);
                 var sigarets2 = sigaretsService.getSigaretsById(count2);
-                //Процент оклада первого
+                //Процент оклада третьего
                 for (count3 = k; count3 < 50; count3++) {
                     var worker3 = service.findWorkerById(count3);
                     var sigarets3 = sigaretsService.getSigaretsById(count3);
@@ -799,12 +828,12 @@ public class BestGroupService {
                         magnat1 = sigarets1.getMagnat() * substitution1;
                         minsk1 = sigarets1.getMinsk() * substitution1;
                         souz1 = sigarets1.getSouz() * substitution1;
-                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
-                                ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
-                                vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
-                                stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
-                                prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
+//                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
+//                                ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
+//                                vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
+//                                stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
+//                                prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
                         //Процент оклада второго
                         for (secondCoef = 1; secondCoef < 201; secondCoef++) {
                             rentRatio2 = worker2.getRatio() * worker2.getRent();
@@ -849,12 +878,12 @@ public class BestGroupService {
                             magnat2 = sigarets2.getMagnat() * substitution2;
                             minsk2 = sigarets2.getMinsk() * substitution2;
                             souz2 = sigarets2.getSouz() * substitution2;
-                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                    bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
-                                    ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
-                                    vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
-                                    stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
-                                    prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
+//                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                    bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
+//                                    ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
+//                                    vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
+//                                    stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
+//                                    prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
                             for (thirdCoef = 1; thirdCoef < 201; thirdCoef++) {
                                 rentRatio3 = worker3.getRatio() * worker3.getRent();
                                 substitution3 = rentRatio3 * secondCoef / 100;
@@ -899,12 +928,12 @@ public class BestGroupService {
                                 magnat3 = sigarets3.getMagnat() * substitution3;
                                 minsk3 = sigarets3.getMinsk() * substitution3;
                                 souz3 = sigarets3.getSouz() * substitution3;
-                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                        bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
-                                        ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
-                                        vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
-                                        stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
-                                        prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
+//                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                        bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
+//                                        ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
+//                                        vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
+//                                        stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
+//                                        prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
 
                                 double sumBond = bond1 + bond2 + bond3;
                                 double sumKent = kent1 + kent2 + kent3;
@@ -1518,12 +1547,12 @@ public class BestGroupService {
                             magnat1 = sigarets1.getMagnat() * substitution1;
                             minsk1 = sigarets1.getMinsk() * substitution1;
                             souz1 = sigarets1.getSouz() * substitution1;
-                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                    bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
-                                    ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
-                                    vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
-                                    stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
-                                    prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
+//                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                    bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
+//                                    ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
+//                                    vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
+//                                    stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
+//                                    prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
                             //Процент оклада второго
                             for (secondCoef = 1; secondCoef < 201; secondCoef++) {
                                 rentRatio2 = worker2.getRatio() * worker2.getRent();
@@ -1568,12 +1597,12 @@ public class BestGroupService {
                                 magnat2 = sigarets2.getMagnat() * substitution2;
                                 minsk2 = sigarets2.getMinsk() * substitution2;
                                 souz2 = sigarets2.getSouz() * substitution2;
-                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                        bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
-                                        ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
-                                        vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
-                                        stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
-                                        prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
+//                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                        bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
+//                                        ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
+//                                        vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
+//                                        stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
+//                                        prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
                                 //Процент оклада третьего
                                 for (thirdCoef = 1; thirdCoef < 201; thirdCoef++) {
                                     rentRatio3 = worker3.getRatio() * worker3.getRent();
@@ -1619,12 +1648,12 @@ public class BestGroupService {
                                     magnat3 = sigarets3.getMagnat() * substitution3;
                                     minsk3 = sigarets3.getMinsk() * substitution3;
                                     souz3 = sigarets3.getSouz() * substitution3;
-                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                            bond3, kent3, parlament3, winston3, lm3, malboro3, rotmans3,
-                                            ld3, fmorris3, aliance3, java3, optima3, petr3, maksim3, crests3,
-                                            vog3, glamur3, kiss3, esse3, quin3, lady3, mor3, chester3, radopy3,
-                                            stuardessa3, stolichniye3, donskoy3, troyka3, fast3, royal3, manchester3,
-                                            prestigue3, premier3, cosmos3, next3, magnat3, minsk3, souz3, count3);
+//                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                            bond3, kent3, parlament3, winston3, lm3, malboro3, rotmans3,
+//                                            ld3, fmorris3, aliance3, java3, optima3, petr3, maksim3, crests3,
+//                                            vog3, glamur3, kiss3, esse3, quin3, lady3, mor3, chester3, radopy3,
+//                                            stuardessa3, stolichniye3, donskoy3, troyka3, fast3, royal3, manchester3,
+//                                            prestigue3, premier3, cosmos3, next3, magnat3, minsk3, souz3, count3);
                                     //Процент оклада четвёртого
                                     for (fourthCoef = 1; fourthCoef < 201; fourthCoef++) {
                                         rentRatio4 = worker4.getRatio() * worker4.getRent();
@@ -1668,12 +1697,12 @@ public class BestGroupService {
                                         magnat4 = sigarets4.getMagnat() * substitution4;
                                         minsk4 = sigarets4.getMinsk() * substitution4;
                                         souz4 = sigarets4.getSouz() * substitution4;
-                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                bond4, kent4, parlament4, winston4, lm4, malboro4, rotmans4,
-                                                ld4, fmorris4, aliance4, java4, optima4, petr4, maksim4, crests4,
-                                                vog4, glamur4, kiss4, esse4, quin4, lady4, mor4, chester4, radopy4,
-                                                stuardessa4, stolichniye4, donskoy4, troyka4, fast4, royal4, manchester4,
-                                                prestigue4, premier4, cosmos4, next4, magnat4, minsk4, souz4, count4);
+//                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                bond4, kent4, parlament4, winston4, lm4, malboro4, rotmans4,
+//                                                ld4, fmorris4, aliance4, java4, optima4, petr4, maksim4, crests4,
+//                                                vog4, glamur4, kiss4, esse4, quin4, lady4, mor4, chester4, radopy4,
+//                                                stuardessa4, stolichniye4, donskoy4, troyka4, fast4, royal4, manchester4,
+//                                                prestigue4, premier4, cosmos4, next4, magnat4, minsk4, souz4, count4);
 
                                         double sumBond = bond1 + bond2 + bond3 + bond4;
                                         double sumKent = kent1 + kent2 + kent3 + kent4;
@@ -2346,12 +2375,12 @@ public class BestGroupService {
                                 magnat1 = sigarets1.getMagnat() * substitution1;
                                 minsk1 = sigarets1.getMinsk() * substitution1;
                                 souz1 = sigarets1.getSouz() * substitution1;
-                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                        bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
-                                        ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
-                                        vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
-                                        stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
-                                        prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
+//                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                        bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
+//                                        ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
+//                                        vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
+//                                        stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
+//                                        prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
                                 //Процент оклада второго
                                 for (secondCoef = 1; secondCoef < 201; secondCoef++) {
                                     rentRatio2 = worker2.getRatio() * worker2.getRent();
@@ -2396,12 +2425,12 @@ public class BestGroupService {
                                     magnat2 = sigarets2.getMagnat() * substitution2;
                                     minsk2 = sigarets2.getMinsk() * substitution2;
                                     souz2 = sigarets2.getSouz() * substitution2;
-                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                            bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
-                                            ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
-                                            vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
-                                            stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
-                                            prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
+//                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                            bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
+//                                            ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
+//                                            vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
+//                                            stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
+//                                            prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
                                     //Процент оклада третьего
                                     for (thirdCoef = 1; thirdCoef < 201; thirdCoef++) {
                                         rentRatio3 = worker3.getRatio() * worker3.getRent();
@@ -2447,12 +2476,12 @@ public class BestGroupService {
                                         magnat3 = sigarets3.getMagnat() * substitution3;
                                         minsk3 = sigarets3.getMinsk() * substitution3;
                                         souz3 = sigarets3.getSouz() * substitution3;
-                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                bond3, kent3, parlament3, winston3, lm3, malboro3, rotmans3,
-                                                ld3, fmorris3, aliance3, java3, optima3, petr3, maksim3, crests3,
-                                                vog3, glamur3, kiss3, esse3, quin3, lady3, mor3, chester3, radopy3,
-                                                stuardessa3, stolichniye3, donskoy3, troyka3, fast3, royal3, manchester3,
-                                                prestigue3, premier3, cosmos3, next3, magnat3, minsk3, souz3, count3);
+//                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                bond3, kent3, parlament3, winston3, lm3, malboro3, rotmans3,
+//                                                ld3, fmorris3, aliance3, java3, optima3, petr3, maksim3, crests3,
+//                                                vog3, glamur3, kiss3, esse3, quin3, lady3, mor3, chester3, radopy3,
+//                                                stuardessa3, stolichniye3, donskoy3, troyka3, fast3, royal3, manchester3,
+//                                                prestigue3, premier3, cosmos3, next3, magnat3, minsk3, souz3, count3);
                                         //Процент оклада четвёртого
                                         for (fourthCoef = 1; fourthCoef < 201; fourthCoef++) {
                                             rentRatio4 = worker4.getRatio() * worker4.getRent();
@@ -2496,12 +2525,12 @@ public class BestGroupService {
                                             magnat4 = sigarets4.getMagnat() * substitution4;
                                             minsk4 = sigarets4.getMinsk() * substitution4;
                                             souz4 = sigarets4.getSouz() * substitution4;
-                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                    bond4, kent4, parlament4, winston4, lm4, malboro4, rotmans4,
-                                                    ld4, fmorris4, aliance4, java4, optima4, petr4, maksim4, crests4,
-                                                    vog4, glamur4, kiss4, esse4, quin4, lady4, mor4, chester4, radopy4,
-                                                    stuardessa4, stolichniye4, donskoy4, troyka4, fast4, royal4, manchester4,
-                                                    prestigue4, premier4, cosmos4, next4, magnat4, minsk4, souz4, count4);
+//                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                    bond4, kent4, parlament4, winston4, lm4, malboro4, rotmans4,
+//                                                    ld4, fmorris4, aliance4, java4, optima4, petr4, maksim4, crests4,
+//                                                    vog4, glamur4, kiss4, esse4, quin4, lady4, mor4, chester4, radopy4,
+//                                                    stuardessa4, stolichniye4, donskoy4, troyka4, fast4, royal4, manchester4,
+//                                                    prestigue4, premier4, cosmos4, next4, magnat4, minsk4, souz4, count4);
                                             //Процент оклада пятого
                                             for (fifthCoef = 1; fifthCoef < 201; fifthCoef++) {
                                                 rentRatio5 = worker5.getRatio() * worker5.getRent();
@@ -2545,12 +2574,12 @@ public class BestGroupService {
                                                 magnat5 = sigarets5.getMagnat() * substitution5;
                                                 minsk5 = sigarets5.getMinsk() * substitution5;
                                                 souz5 = sigarets5.getSouz() * substitution5;
-                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                        bond5, kent5, parlament5, winston5, lm5, malboro5, rotmans5,
-                                                        ld5, fmorris5, aliance5, java5, optima5, petr5, maksim5, crests5,
-                                                        vog5, glamur5, kiss5, esse5, quin5, lady5, mor5, chester5, radopy5,
-                                                        stuardessa5, stolichniye5, donskoy5, troyka5, fast5, royal5, manchester5,
-                                                        prestigue5, premier5, cosmos5, next5, magnat5, minsk5, souz5, count5);
+//                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                        bond5, kent5, parlament5, winston5, lm5, malboro5, rotmans5,
+//                                                        ld5, fmorris5, aliance5, java5, optima5, petr5, maksim5, crests5,
+//                                                        vog5, glamur5, kiss5, esse5, quin5, lady5, mor5, chester5, radopy5,
+//                                                        stuardessa5, stolichniye5, donskoy5, troyka5, fast5, royal5, manchester5,
+//                                                        prestigue5, premier5, cosmos5, next5, magnat5, minsk5, souz5, count5);
 
 
                                                 double sumBond = bond1 + bond2 + bond3 + bond4 + bond5;
@@ -3285,12 +3314,12 @@ public class BestGroupService {
                                     magnat1 = sigarets1.getMagnat() * substitution1;
                                     minsk1 = sigarets1.getMinsk() * substitution1;
                                     souz1 = sigarets1.getSouz() * substitution1;
-                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                            bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
-                                            ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
-                                            vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
-                                            stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
-                                            prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
+//                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                            bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
+//                                            ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
+//                                            vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
+//                                            stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
+//                                            prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
                                     //Процент оклада второго
                                     for (secondCoef = 1; secondCoef < 201; secondCoef++) {
                                         rentRatio2 = worker2.getRatio() * worker2.getRent();
@@ -3335,12 +3364,12 @@ public class BestGroupService {
                                         magnat2 = sigarets2.getMagnat() * substitution2;
                                         minsk2 = sigarets2.getMinsk() * substitution2;
                                         souz2 = sigarets2.getSouz() * substitution2;
-                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
-                                                ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
-                                                vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
-                                                stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
-                                                prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
+//                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
+//                                                ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
+//                                                vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
+//                                                stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
+//                                                prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
                                         //Процент оклада третьего
                                         for (thirdCoef = 1; thirdCoef < 201; thirdCoef++) {
                                             rentRatio3 = worker3.getRatio() * worker3.getRent();
@@ -3386,12 +3415,12 @@ public class BestGroupService {
                                             magnat3 = sigarets3.getMagnat() * substitution3;
                                             minsk3 = sigarets3.getMinsk() * substitution3;
                                             souz3 = sigarets3.getSouz() * substitution3;
-                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                    bond3, kent3, parlament3, winston3, lm3, malboro3, rotmans3,
-                                                    ld3, fmorris3, aliance3, java3, optima3, petr3, maksim3, crests3,
-                                                    vog3, glamur3, kiss3, esse3, quin3, lady3, mor3, chester3, radopy3,
-                                                    stuardessa3, stolichniye3, donskoy3, troyka3, fast3, royal3, manchester3,
-                                                    prestigue3, premier3, cosmos3, next3, magnat3, minsk3, souz3, count3);
+//                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                    bond3, kent3, parlament3, winston3, lm3, malboro3, rotmans3,
+//                                                    ld3, fmorris3, aliance3, java3, optima3, petr3, maksim3, crests3,
+//                                                    vog3, glamur3, kiss3, esse3, quin3, lady3, mor3, chester3, radopy3,
+//                                                    stuardessa3, stolichniye3, donskoy3, troyka3, fast3, royal3, manchester3,
+//                                                    prestigue3, premier3, cosmos3, next3, magnat3, minsk3, souz3, count3);
                                             //Процент оклада четвёртого
                                             for (fourthCoef = 1; fourthCoef < 201; fourthCoef++) {
                                                 rentRatio4 = worker4.getRatio() * worker4.getRent();
@@ -3435,12 +3464,12 @@ public class BestGroupService {
                                                 magnat4 = sigarets4.getMagnat() * substitution4;
                                                 minsk4 = sigarets4.getMinsk() * substitution4;
                                                 souz4 = sigarets4.getSouz() * substitution4;
-                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                        bond4, kent4, parlament4, winston4, lm4, malboro4, rotmans4,
-                                                        ld4, fmorris4, aliance4, java4, optima4, petr4, maksim4, crests4,
-                                                        vog4, glamur4, kiss4, esse4, quin4, lady4, mor4, chester4, radopy4,
-                                                        stuardessa4, stolichniye4, donskoy4, troyka4, fast4, royal4, manchester4,
-                                                        prestigue4, premier4, cosmos4, next4, magnat4, minsk4, souz4, count4);
+//                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                        bond4, kent4, parlament4, winston4, lm4, malboro4, rotmans4,
+//                                                        ld4, fmorris4, aliance4, java4, optima4, petr4, maksim4, crests4,
+//                                                        vog4, glamur4, kiss4, esse4, quin4, lady4, mor4, chester4, radopy4,
+//                                                        stuardessa4, stolichniye4, donskoy4, troyka4, fast4, royal4, manchester4,
+//                                                        prestigue4, premier4, cosmos4, next4, magnat4, minsk4, souz4, count4);
                                                 //Процент оклада пятого
                                                 for (fifthCoef = 1; fifthCoef < 201; fifthCoef++) {
                                                     rentRatio5 = worker5.getRatio() * worker5.getRent();
@@ -3484,12 +3513,12 @@ public class BestGroupService {
                                                     magnat5 = sigarets5.getMagnat() * substitution5;
                                                     minsk5 = sigarets5.getMinsk() * substitution5;
                                                     souz5 = sigarets5.getSouz() * substitution5;
-                                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                            bond5, kent5, parlament5, winston5, lm5, malboro5, rotmans5,
-                                                            ld5, fmorris5, aliance5, java5, optima5, petr5, maksim5, crests5,
-                                                            vog5, glamur5, kiss5, esse5, quin5, lady5, mor5, chester5, radopy5,
-                                                            stuardessa5, stolichniye5, donskoy5, troyka5, fast5, royal5, manchester5,
-                                                            prestigue5, premier5, cosmos5, next5, magnat5, minsk5, souz5, count5);
+//                                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                            bond5, kent5, parlament5, winston5, lm5, malboro5, rotmans5,
+//                                                            ld5, fmorris5, aliance5, java5, optima5, petr5, maksim5, crests5,
+//                                                            vog5, glamur5, kiss5, esse5, quin5, lady5, mor5, chester5, radopy5,
+//                                                            stuardessa5, stolichniye5, donskoy5, troyka5, fast5, royal5, manchester5,
+//                                                            prestigue5, premier5, cosmos5, next5, magnat5, minsk5, souz5, count5);
                                                     //Процент оклада шестого
                                                     for (sixthCoef = 1; sixthCoef < 201; sixthCoef++) {
                                                         rentRatio6 = worker6.getRatio() * worker6.getRent();
@@ -3533,12 +3562,12 @@ public class BestGroupService {
                                                         magnat6 = sigarets6.getMagnat() * substitution6;
                                                         minsk6 = sigarets6.getMinsk() * substitution6;
                                                         souz6 = sigarets6.getSouz() * substitution6;
-                                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                                bond6, kent6, parlament6, winston6, lm6, malboro6, rotmans6,
-                                                                ld6, fmorris6, aliance6, java6, optima6, petr6, maksim6, crests6,
-                                                                vog6, glamur6, kiss6, esse6, quin6, lady6, mor6, chester6, radopy6,
-                                                                stuardessa6, stolichniye6, donskoy6, troyka6, fast6, royal6, manchester6,
-                                                                prestigue6, premier6, cosmos6, next6, magnat6, minsk6, souz6, count6);
+//                                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                                bond6, kent6, parlament6, winston6, lm6, malboro6, rotmans6,
+//                                                                ld6, fmorris6, aliance6, java6, optima6, petr6, maksim6, crests6,
+//                                                                vog6, glamur6, kiss6, esse6, quin6, lady6, mor6, chester6, radopy6,
+//                                                                stuardessa6, stolichniye6, donskoy6, troyka6, fast6, royal6, manchester6,
+//                                                                prestigue6, premier6, cosmos6, next6, magnat6, minsk6, souz6, count6);
                                                         //Процент оклада седьмого
 
 
@@ -4321,12 +4350,12 @@ public class BestGroupService {
                                         magnat1 = sigarets1.getMagnat() * substitution1;
                                         minsk1 = sigarets1.getMinsk() * substitution1;
                                         souz1 = sigarets1.getSouz() * substitution1;
-                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
-                                                ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
-                                                vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
-                                                stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
-                                                prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
+//                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
+//                                                ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
+//                                                vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
+//                                                stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
+//                                                prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
                                         //Процент оклада второго
                                         for (secondCoef = 1; secondCoef < 201; secondCoef++) {
                                             rentRatio2 = worker2.getRatio() * worker2.getRent();
@@ -4371,12 +4400,12 @@ public class BestGroupService {
                                             magnat2 = sigarets2.getMagnat() * substitution2;
                                             minsk2 = sigarets2.getMinsk() * substitution2;
                                             souz2 = sigarets2.getSouz() * substitution2;
-                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                    bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
-                                                    ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
-                                                    vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
-                                                    stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
-                                                    prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
+//                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                    bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
+//                                                    ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
+//                                                    vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
+//                                                    stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
+//                                                    prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
                                             //Процент оклада третьего
                                             for (thirdCoef = 1; thirdCoef < 201; thirdCoef++) {
                                                 rentRatio3 = worker3.getRatio() * worker3.getRent();
@@ -4422,12 +4451,12 @@ public class BestGroupService {
                                                 magnat3 = sigarets3.getMagnat() * substitution3;
                                                 minsk3 = sigarets3.getMinsk() * substitution3;
                                                 souz3 = sigarets3.getSouz() * substitution3;
-                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                        bond3, kent3, parlament3, winston3, lm3, malboro3, rotmans3,
-                                                        ld3, fmorris3, aliance3, java3, optima3, petr3, maksim3, crests3,
-                                                        vog3, glamur3, kiss3, esse3, quin3, lady3, mor3, chester3, radopy3,
-                                                        stuardessa3, stolichniye3, donskoy3, troyka3, fast3, royal3, manchester3,
-                                                        prestigue3, premier3, cosmos3, next3, magnat3, minsk3, souz3, count3);
+//                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                        bond3, kent3, parlament3, winston3, lm3, malboro3, rotmans3,
+//                                                        ld3, fmorris3, aliance3, java3, optima3, petr3, maksim3, crests3,
+//                                                        vog3, glamur3, kiss3, esse3, quin3, lady3, mor3, chester3, radopy3,
+//                                                        stuardessa3, stolichniye3, donskoy3, troyka3, fast3, royal3, manchester3,
+//                                                        prestigue3, premier3, cosmos3, next3, magnat3, minsk3, souz3, count3);
                                                 //Процент оклада четвёртого
                                                 for (fourthCoef = 1; fourthCoef < 201; fourthCoef++) {
                                                     rentRatio4 = worker4.getRatio() * worker4.getRent();
@@ -4471,12 +4500,12 @@ public class BestGroupService {
                                                     magnat4 = sigarets4.getMagnat() * substitution4;
                                                     minsk4 = sigarets4.getMinsk() * substitution4;
                                                     souz4 = sigarets4.getSouz() * substitution4;
-                                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                            bond4, kent4, parlament4, winston4, lm4, malboro4, rotmans4,
-                                                            ld4, fmorris4, aliance4, java4, optima4, petr4, maksim4, crests4,
-                                                            vog4, glamur4, kiss4, esse4, quin4, lady4, mor4, chester4, radopy4,
-                                                            stuardessa4, stolichniye4, donskoy4, troyka4, fast4, royal4, manchester4,
-                                                            prestigue4, premier4, cosmos4, next4, magnat4, minsk4, souz4, count4);
+//                                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                            bond4, kent4, parlament4, winston4, lm4, malboro4, rotmans4,
+//                                                            ld4, fmorris4, aliance4, java4, optima4, petr4, maksim4, crests4,
+//                                                            vog4, glamur4, kiss4, esse4, quin4, lady4, mor4, chester4, radopy4,
+//                                                            stuardessa4, stolichniye4, donskoy4, troyka4, fast4, royal4, manchester4,
+//                                                            prestigue4, premier4, cosmos4, next4, magnat4, minsk4, souz4, count4);
                                                     //Процент оклада пятого
                                                     for (fifthCoef = 1; fifthCoef < 201; fifthCoef++) {
                                                         rentRatio5 = worker5.getRatio() * worker5.getRent();
@@ -4520,12 +4549,12 @@ public class BestGroupService {
                                                         magnat5 = sigarets5.getMagnat() * substitution5;
                                                         minsk5 = sigarets5.getMinsk() * substitution5;
                                                         souz5 = sigarets5.getSouz() * substitution5;
-                                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                                bond5, kent5, parlament5, winston5, lm5, malboro5, rotmans5,
-                                                                ld5, fmorris5, aliance5, java5, optima5, petr5, maksim5, crests5,
-                                                                vog5, glamur5, kiss5, esse5, quin5, lady5, mor5, chester5, radopy5,
-                                                                stuardessa5, stolichniye5, donskoy5, troyka5, fast5, royal5, manchester5,
-                                                                prestigue5, premier5, cosmos5, next5, magnat5, minsk5, souz5, count5);
+//                                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                                bond5, kent5, parlament5, winston5, lm5, malboro5, rotmans5,
+//                                                                ld5, fmorris5, aliance5, java5, optima5, petr5, maksim5, crests5,
+//                                                                vog5, glamur5, kiss5, esse5, quin5, lady5, mor5, chester5, radopy5,
+//                                                                stuardessa5, stolichniye5, donskoy5, troyka5, fast5, royal5, manchester5,
+//                                                                prestigue5, premier5, cosmos5, next5, magnat5, minsk5, souz5, count5);
                                                         //Процент оклада шестого
                                                         for (sixthCoef = 1; sixthCoef < 201; sixthCoef++) {
                                                             rentRatio6 = worker6.getRatio() * worker6.getRent();
@@ -4569,12 +4598,12 @@ public class BestGroupService {
                                                             magnat6 = sigarets6.getMagnat() * substitution6;
                                                             minsk6 = sigarets6.getMinsk() * substitution6;
                                                             souz6 = sigarets6.getSouz() * substitution6;
-                                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                                    bond6, kent6, parlament6, winston6, lm6, malboro6, rotmans6,
-                                                                    ld6, fmorris6, aliance6, java6, optima6, petr6, maksim6, crests6,
-                                                                    vog6, glamur6, kiss6, esse6, quin6, lady6, mor6, chester6, radopy6,
-                                                                    stuardessa6, stolichniye6, donskoy6, troyka6, fast6, royal6, manchester6,
-                                                                    prestigue6, premier6, cosmos6, next6, magnat6, minsk6, souz6, count6);
+//                                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                                    bond6, kent6, parlament6, winston6, lm6, malboro6, rotmans6,
+//                                                                    ld6, fmorris6, aliance6, java6, optima6, petr6, maksim6, crests6,
+//                                                                    vog6, glamur6, kiss6, esse6, quin6, lady6, mor6, chester6, radopy6,
+//                                                                    stuardessa6, stolichniye6, donskoy6, troyka6, fast6, royal6, manchester6,
+//                                                                    prestigue6, premier6, cosmos6, next6, magnat6, minsk6, souz6, count6);
                                                             //Процент оклада седьмого
                                                             for (seventhCoef = 1; seventhCoef < 201; seventhCoef++) {
                                                                 rentRatio7 = worker7.getRatio() * worker7.getRent();
@@ -4618,12 +4647,12 @@ public class BestGroupService {
                                                                 magnat7 = sigarets7.getMagnat() * substitution7;
                                                                 minsk7 = sigarets7.getMinsk() * substitution7;
                                                                 souz7 = sigarets7.getSouz() * substitution7;
-                                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                                        bond7, kent7, parlament7, winston7, lm7, malboro7, rotmans7,
-                                                                        ld7, fmorris7, aliance7, java7, optima7, petr7, maksim7, crests7,
-                                                                        vog7, glamur7, kiss7, esse7, quin7, lady7, mor7, chester7, radopy7,
-                                                                        stuardessa7, stolichniye7, donskoy7, troyka7, fast7, royal7, manchester7,
-                                                                        prestigue7, premier7, cosmos7, next7, magnat7, minsk7, souz7, count7);
+//                                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                                        bond7, kent7, parlament7, winston7, lm7, malboro7, rotmans7,
+//                                                                        ld7, fmorris7, aliance7, java7, optima7, petr7, maksim7, crests7,
+//                                                                        vog7, glamur7, kiss7, esse7, quin7, lady7, mor7, chester7, radopy7,
+//                                                                        stuardessa7, stolichniye7, donskoy7, troyka7, fast7, royal7, manchester7,
+//                                                                        prestigue7, premier7, cosmos7, next7, magnat7, minsk7, souz7, count7);
 
 
                                                                 double sumBond = bond1 + bond2 + bond3 + bond4 + bond5 + bond6 + bond7;
@@ -5414,12 +5443,12 @@ public class BestGroupService {
                                             magnat1 = sigarets1.getMagnat() * substitution1;
                                             minsk1 = sigarets1.getMinsk() * substitution1;
                                             souz1 = sigarets1.getSouz() * substitution1;
-                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                    bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
-                                                    ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
-                                                    vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
-                                                    stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
-                                                    prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
+//                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                    bond1, kent1, parlament1, winston1, lm1, malboro1, rotmans1,
+//                                                    ld1, fmorris1, aliance1, java1, optima1, petr1, maksim1, crests1,
+//                                                    vog1, glamur1, kiss1, esse1, quin1, lady1, mor1, chester1, radopy1,
+//                                                    stuardessa1, stolichniye1, donskoy1, troyka1, fast1, royal1, manchester1,
+//                                                    prestigue1, premier1, cosmos1, next1, magnat1, minsk1, souz1, count1);
                                             //Процент оклада второго
                                             for (secondCoef = 1; secondCoef < 201; secondCoef++) {
                                                 rentRatio2 = worker2.getRatio() * worker2.getRent();
@@ -5464,12 +5493,12 @@ public class BestGroupService {
                                                 magnat2 = sigarets2.getMagnat() * substitution2;
                                                 minsk2 = sigarets2.getMinsk() * substitution2;
                                                 souz2 = sigarets2.getSouz() * substitution2;
-                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                        bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
-                                                        ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
-                                                        vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
-                                                        stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
-                                                        prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
+//                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                        bond2, kent2, parlament2, winston2, lm2, malboro2, rotmans2,
+//                                                        ld2, fmorris2, aliance2, java2, optima2, petr2, maksim2, crests2,
+//                                                        vog2, glamur2, kiss2, esse2, quin2, lady2, mor2, chester2, radopy2,
+//                                                        stuardessa2, stolichniye2, donskoy2, troyka2, fast2, royal2, manchester2,
+//                                                        prestigue2, premier2, cosmos2, next2, magnat2, minsk2, souz2, count2);
                                                 //Процент оклада третьего
                                                 for (thirdCoef = 1; thirdCoef < 201; thirdCoef++) {
                                                     rentRatio3 = worker3.getRatio() * worker3.getRent();
@@ -5515,12 +5544,12 @@ public class BestGroupService {
                                                     magnat3 = sigarets3.getMagnat() * substitution3;
                                                     minsk3 = sigarets3.getMinsk() * substitution3;
                                                     souz3 = sigarets3.getSouz() * substitution3;
-                                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                            bond3, kent3, parlament3, winston3, lm3, malboro3, rotmans3,
-                                                            ld3, fmorris3, aliance3, java3, optima3, petr3, maksim3, crests3,
-                                                            vog3, glamur3, kiss3, esse3, quin3, lady3, mor3, chester3, radopy3,
-                                                            stuardessa3, stolichniye3, donskoy3, troyka3, fast3, royal3, manchester3,
-                                                            prestigue3, premier3, cosmos3, next3, magnat3, minsk3, souz3, count3);
+//                                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                            bond3, kent3, parlament3, winston3, lm3, malboro3, rotmans3,
+//                                                            ld3, fmorris3, aliance3, java3, optima3, petr3, maksim3, crests3,
+//                                                            vog3, glamur3, kiss3, esse3, quin3, lady3, mor3, chester3, radopy3,
+//                                                            stuardessa3, stolichniye3, donskoy3, troyka3, fast3, royal3, manchester3,
+//                                                            prestigue3, premier3, cosmos3, next3, magnat3, minsk3, souz3, count3);
                                                     //Процент оклада четвёртого
                                                     for (fourthCoef = 1; fourthCoef < 201; fourthCoef++) {
                                                         rentRatio4 = worker4.getRatio() * worker4.getRent();
@@ -5564,12 +5593,12 @@ public class BestGroupService {
                                                         magnat4 = sigarets4.getMagnat() * substitution4;
                                                         minsk4 = sigarets4.getMinsk() * substitution4;
                                                         souz4 = sigarets4.getSouz() * substitution4;
-                                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                                bond4, kent4, parlament4, winston4, lm4, malboro4, rotmans4,
-                                                                ld4, fmorris4, aliance4, java4, optima4, petr4, maksim4, crests4,
-                                                                vog4, glamur4, kiss4, esse4, quin4, lady4, mor4, chester4, radopy4,
-                                                                stuardessa4, stolichniye4, donskoy4, troyka4, fast4, royal4, manchester4,
-                                                                prestigue4, premier4, cosmos4, next4, magnat4, minsk4, souz4, count4);
+//                                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                                bond4, kent4, parlament4, winston4, lm4, malboro4, rotmans4,
+//                                                                ld4, fmorris4, aliance4, java4, optima4, petr4, maksim4, crests4,
+//                                                                vog4, glamur4, kiss4, esse4, quin4, lady4, mor4, chester4, radopy4,
+//                                                                stuardessa4, stolichniye4, donskoy4, troyka4, fast4, royal4, manchester4,
+//                                                                prestigue4, premier4, cosmos4, next4, magnat4, minsk4, souz4, count4);
                                                         //Процент оклада пятого
                                                         for (fifthCoef = 1; fifthCoef < 201; fifthCoef++) {
                                                             rentRatio5 = worker5.getRatio() * worker5.getRent();
@@ -5613,12 +5642,12 @@ public class BestGroupService {
                                                             magnat5 = sigarets5.getMagnat() * substitution5;
                                                             minsk5 = sigarets5.getMinsk() * substitution5;
                                                             souz5 = sigarets5.getSouz() * substitution5;
-                                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                                    bond5, kent5, parlament5, winston5, lm5, malboro5, rotmans5,
-                                                                    ld5, fmorris5, aliance5, java5, optima5, petr5, maksim5, crests5,
-                                                                    vog5, glamur5, kiss5, esse5, quin5, lady5, mor5, chester5, radopy5,
-                                                                    stuardessa5, stolichniye5, donskoy5, troyka5, fast5, royal5, manchester5,
-                                                                    prestigue5, premier5, cosmos5, next5, magnat5, minsk5, souz5, count5);
+//                                                            jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                                    bond5, kent5, parlament5, winston5, lm5, malboro5, rotmans5,
+//                                                                    ld5, fmorris5, aliance5, java5, optima5, petr5, maksim5, crests5,
+//                                                                    vog5, glamur5, kiss5, esse5, quin5, lady5, mor5, chester5, radopy5,
+//                                                                    stuardessa5, stolichniye5, donskoy5, troyka5, fast5, royal5, manchester5,
+//                                                                    prestigue5, premier5, cosmos5, next5, magnat5, minsk5, souz5, count5);
                                                             //Процент оклада шестого
                                                             for (sixthCoef = 1; sixthCoef < 201; sixthCoef++) {
                                                                 rentRatio6 = worker6.getRatio() * worker6.getRent();
@@ -5662,12 +5691,12 @@ public class BestGroupService {
                                                                 magnat6 = sigarets6.getMagnat() * substitution6;
                                                                 minsk6 = sigarets6.getMinsk() * substitution6;
                                                                 souz6 = sigarets6.getSouz() * substitution6;
-                                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                                        bond6, kent6, parlament6, winston6, lm6, malboro6, rotmans6,
-                                                                        ld6, fmorris6, aliance6, java6, optima6, petr6, maksim6, crests6,
-                                                                        vog6, glamur6, kiss6, esse6, quin6, lady6, mor6, chester6, radopy6,
-                                                                        stuardessa6, stolichniye6, donskoy6, troyka6, fast6, royal6, manchester6,
-                                                                        prestigue6, premier6, cosmos6, next6, magnat6, minsk6, souz6, count6);
+//                                                                jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                                        bond6, kent6, parlament6, winston6, lm6, malboro6, rotmans6,
+//                                                                        ld6, fmorris6, aliance6, java6, optima6, petr6, maksim6, crests6,
+//                                                                        vog6, glamur6, kiss6, esse6, quin6, lady6, mor6, chester6, radopy6,
+//                                                                        stuardessa6, stolichniye6, donskoy6, troyka6, fast6, royal6, manchester6,
+//                                                                        prestigue6, premier6, cosmos6, next6, magnat6, minsk6, souz6, count6);
                                                                 //Процент оклада седьмого
                                                                 for (seventhCoef = 1; seventhCoef < 201; seventhCoef++) {
                                                                     rentRatio7 = worker7.getRatio() * worker7.getRent();
@@ -5711,17 +5740,17 @@ public class BestGroupService {
                                                                     magnat7 = sigarets7.getMagnat() * substitution7;
                                                                     minsk7 = sigarets7.getMinsk() * substitution7;
                                                                     souz7 = sigarets7.getSouz() * substitution7;
-                                                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                                            bond7, kent7, parlament7, winston7, lm7, malboro7, rotmans7,
-                                                                            ld7, fmorris7, aliance7, java7, optima7, petr7, maksim7, crests7,
-                                                                            vog7, glamur7, kiss7, esse7, quin7, lady7, mor7, chester7, radopy7,
-                                                                            stuardessa7, stolichniye7, donskoy7, troyka7, fast7, royal7, manchester7,
-                                                                            prestigue7, premier7, cosmos7, next7, magnat7, minsk7, souz7, count7);
+//                                                                    jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                                            bond7, kent7, parlament7, winston7, lm7, malboro7, rotmans7,
+//                                                                            ld7, fmorris7, aliance7, java7, optima7, petr7, maksim7, crests7,
+//                                                                            vog7, glamur7, kiss7, esse7, quin7, lady7, mor7, chester7, radopy7,
+//                                                                            stuardessa7, stolichniye7, donskoy7, troyka7, fast7, royal7, manchester7,
+//                                                                            prestigue7, premier7, cosmos7, next7, magnat7, minsk7, souz7, count7);
 
                                                                     //Процент оклада восьмого
                                                                     for (eighthCoef = 1; eighthCoef < 201; eighthCoef++) {
                                                                         rentRatio8 = worker8.getRatio() * worker8.getRent();
-                                                                        substitution8 = rentRatio7 * eighthCoef / 100;
+                                                                        substitution8 = rentRatio8 * eighthCoef / 100;
 
                                                                         bond8 = sigarets8.getBond() * substitution8;
                                                                         kent8 = sigarets8.getKent() * substitution8;
@@ -5761,12 +5790,12 @@ public class BestGroupService {
                                                                         magnat8 = sigarets8.getMagnat() * substitution8;
                                                                         minsk8 = sigarets8.getMinsk() * substitution8;
                                                                         souz8 = sigarets8.getSouz() * substitution8;
-                                                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
-                                                                                bond8, kent8, parlament8, winston8, lm8, malboro8, rotmans8,
-                                                                                ld8, fmorris8, aliance8, java8, optima8, petr8, maksim8, crests8,
-                                                                                vog8, glamur8, kiss8, esse8, quin8, lady8, mor8, chester8, radopy8,
-                                                                                stuardessa8, stolichniye8, donskoy8, troyka8, fast8, royal8, manchester8,
-                                                                                prestigue8, premier8, cosmos8, next8, magnat8, minsk8, souz8, count8);
+//                                                                        jdbcTemplate.update(UPDATE_TEMPSIGARETS,
+//                                                                                bond8, kent8, parlament8, winston8, lm8, malboro8, rotmans8,
+//                                                                                ld8, fmorris8, aliance8, java8, optima8, petr8, maksim8, crests8,
+//                                                                                vog8, glamur8, kiss8, esse8, quin8, lady8, mor8, chester8, radopy8,
+//                                                                                stuardessa8, stolichniye8, donskoy8, troyka8, fast8, royal8, manchester8,
+//                                                                                prestigue8, premier8, cosmos8, next8, magnat8, minsk8, souz8, count8);
 
 
                                                                         double sumBond = bond1 + bond2 + bond3 + bond4 + bond5 + bond6 + bond7 + bond8;
@@ -5930,6 +5959,7 @@ public class BestGroupService {
                                                                                                                                                                                                                     if (coefMagnat >= parameters.getParameter36()) {
                                                                                                                                                                                                                         if (coefMinsk >= parameters.getParameter37()) {
                                                                                                                                                                                                                             if (coefSouz >= parameters.getParameter38()) {
+                                                                                                                                                                                                                                System.out.println("Группа из 8 нашлась!");
                                                                                                                                                                                                                                 jdbcTemplate.update(SAVE_BEST_GROUP8,
                                                                                                                                                                                                                                         worker1.getWorkerId(),
                                                                                                                                                                                                                                         worker2.getWorkerId(),
@@ -6131,21 +6161,4 @@ public class BestGroupService {
     }
 
 
-    public void setNum(int num) {
-        if (num == 2) {
-            saveBestGroup2();
-        } else if (num == 3) {
-            saveBestGroup3();
-        } else if (num == 4) {
-            saveBestGroup4();
-        } else if (num == 5) {
-            saveBestGroup5();
-        } else if (num == 6) {
-            saveBestGroup6();
-        } else if (num == 7) {
-            saveBestGroup7();
-        } else if (num == 8) {
-            saveBestGroup8();
-        }
-    }
 }
